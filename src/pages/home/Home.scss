@@ -1,0 +1,32 @@
+@import '../../scss/functions/px-to-rem.scss';
+@import '../../scss/mixins/breakpoints.scss';
+@import '../../scss/mixins/variables.scss';
+
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__section {
+        width: 100vw;
+        margin: toRem(50) auto;
+
+        &__title {
+            color: $color_light;
+            font-size: toRem(38);
+            text-align: center;
+            text-transform: capitalize;
+            -webkit-text-stroke: toRem(1) $bg_color;
+            text-shadow: 2px 2px 5px black;
+            margin-bottom: toRem(15);
+        }
+
+        &__subtitle {
+            color: $color_light;
+            font-size: toRem(18);
+            text-align: center;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 5px black;
+        }
+    }
+}

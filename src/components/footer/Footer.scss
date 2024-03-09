@@ -1,0 +1,28 @@
+@import '../../scss/functions/px-to-rem.scss';
+@import '../../scss/mixins/breakpoints.scss';
+@import '../../scss/mixins/variables.scss';
+
+.footer {
+    display: flex;
+    gap: toRem(20);
+    margin: 0 toRem(10);
+    color: $color_light;
+    text-transform: uppercase;
+
+    &__list {
+        padding: toRem(20);
+
+        // &__title {
+
+        // }
+
+        &__item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: toRem(10) 0;
+            
+        } 
+    }
+
+}

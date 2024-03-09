@@ -1,0 +1,54 @@
+@import '../../../scss/mixins/breakpoints.scss';
+@import '../../../scss/mixins/variables.scss';
+@import '../../../scss/functions/px-to-rem.scss';
+
+.news-card {
+    min-width: toRem(345);
+    min-height: toRem(345);
+    max-width: toRem(345);
+    max-height: toRem(345);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    color: $color_light;
+    background-color: $color_primary;
+    border-radius: toRem(30);
+    margin-top: toRem(30);
+    padding: toRem(30);
+    box-shadow: 5px 5px 10px -2px black;
+
+    &__pin {
+        position: absolute;
+        top: toRem(-30);
+        left: toRem(30);
+
+        &--urgent {
+            color: $color_secondary;
+        }
+    }
+
+    &__title {
+        font-size: toRem(18);
+        text-transform: uppercase;
+        text-shadow: 2px 2px 5px black;
+    }
+
+    &__image {
+        margin: toRem(20) 0;
+    }
+
+    &__text {
+        font-size: toRem(18);
+        text-align: center;
+        max-width: toRem(200);
+        display: -webkit-box; 
+        -webkit-box-orient: vertical; 
+        -webkit-line-clamp: 3; 
+        overflow: hidden; 
+        text-overflow: ellipsis;
+        text-shadow: 2px 2px 5px black;
+    }
+
+
+}

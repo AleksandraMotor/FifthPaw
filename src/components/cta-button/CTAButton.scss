@@ -1,0 +1,50 @@
+@import '../../scss/functions/px-to-rem.scss';
+@import '../../scss/mixins/variables.scss';
+@import '../../scss/mixins/breakpoints.scss';
+
+
+.cta-button {
+    border-radius: toRem(50);
+    border: toRem(2) solid;
+    border-color: transparent;
+    background-color: $color_light;
+    font-size: toRem(24);
+    font-weight: 600;
+    color: $color_secondary;
+    line-height: 1;
+    padding: toRem(14) toRem(35);
+    box-shadow: 5px 5px 10px -2px $bg_color;
+    
+    &:hover {
+        color: $color_light;
+        background-color: $color_secondary;
+    }
+
+    &--orange {
+        text-transform: uppercase;
+        letter-spacing: toRem(1.2);
+        font-size: toRem(38);
+        background-color: $color_secondary;
+        color: $color_light;
+        border-color: $color_secondary;
+        text-shadow: 2px 2px 5px $bg_color;
+
+        &:hover {
+            background-color: $color_light;
+            color: $bg_color;
+            text-shadow: none;
+            font-weight: 800;
+        }
+    }
+
+    &--brown {
+        background-color: $color_light;
+        color: $bg_color;
+        border-color: $color_secondary;
+
+        &:hover {
+            background-color: transparent;
+            color: $color_light;
+        }
+    }
+}

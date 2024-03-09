@@ -1,0 +1,57 @@
+@import '../../../scss/mixins/breakpoints.scss';
+@import '../../../scss/mixins/variables.scss';
+@import '../../../scss/functions/px-to-rem.scss';
+
+.stories-card {
+    width: toRem(345);
+    height: toRem(250);
+    background-color: $color_brighter;
+    border-radius: toRem(30);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: toRem(10);
+    position: relative;
+    margin-top: toRem(80);
+    box-shadow: 5px 5px 10px -2px black;
+    padding: toRem(20);
+
+    &__image {
+        position: absolute;
+        top: toRem(-70);
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        border-radius: 50%;
+        box-shadow: 5px 5px 10px -2px black;
+    }
+
+    &__header {
+        font-size: toRem(18);
+        color: $color_light;
+        font-weight: 400;
+        letter-spacing: toRem(1.2);
+        text-shadow: 2px 2px 5px black;
+
+    }
+
+    &__text {
+        font-size: toRem(14);
+        font-weight: 600;
+        text-align: center;
+        color: $bg_color;
+        max-width: toRem(200);
+        display: -webkit-box; 
+        -webkit-box-orient: vertical; 
+        -webkit-line-clamp: 4; 
+        overflow: hidden; 
+        text-overflow: ellipsis;
+    }
+
+    &__cta {
+        font-size: toRem(16);
+        color: $color_light;
+        letter-spacing: toRem(0.8);
+    }
+}

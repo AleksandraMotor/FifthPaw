@@ -1,0 +1,146 @@
+@import '../../scss/functions/px-to-rem.scss';
+@import '../../scss/mixins/breakpoints.scss';
+@import '../../scss/mixins/variables.scss';
+
+.layout {
+    width: 100%;
+    height: 100%;
+    background-color: $bg_color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &::before {
+        content: " ";
+        display: block;
+        width: 100vw;
+        height: toRem(25);
+        background-image: linear-gradient(to right, $color_brighter, $color_secondary);
+        box-shadow: 0px 5px 10px -2px black;
+        z-index: 15;
+    }
+
+    &::after {
+        content: " ";
+        display: block;
+        width: 100vw;
+        height: toRem(25);
+        background-image: linear-gradient(to right, $color_brighter, $color_secondary);
+        box-shadow: 0px -5px 10px -2px black;
+        z-index: 15;
+    }
+
+    &__menu {
+        width: 100%;
+        height: toRem(100);
+        background-color: $color_primary;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        z-index: 10;
+        box-shadow: 5px 5px 10px -2px black;
+
+
+        @include breakpoint-above(md) {
+            max-width: toRem(1064);
+            border-bottom-left-radius: toRem(20);
+            border-bottom-right-radius: toRem(20);
+        }
+
+        &__logo {
+            margin: 0 toRem(10);
+        }
+
+        &__burger {
+            fill: $color_light;
+            font-size: toRem(34);
+            margin: toRem(20);
+        }
+
+        &__navigation {
+            position: absolute;
+            top: toRem(100);
+            background-color: $bg_color;
+            opacity: 0.8;
+            left: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: $color_light;
+            font-size: toRem(18);
+            text-transform: uppercase;
+            letter-spacing: toRem(1.2);
+
+            &--hide {
+                display: none;
+            }
+
+            &--desktop {
+                position: static;
+                display: flex;
+                flex-direction: row;
+                justify-content: end;
+                margin: 0 toRem(10);
+                font-size: toRem(16);
+                font-weight: 400;
+                background-color: transparent;
+            }
+
+             &__tab {
+                width: 100%;
+                padding: toRem(20);
+                text-align: center;
+                cursor: pointer;
+                border-top: toRem(1) solid;
+                border-bottom: toRem(1) solid;
+                border-color: transparent;
+
+                &:hover, &:focus-within {
+                    text-decoration: underline;
+                    border-color: $color_light;
+                }
+
+                &--active {
+                    color: $color_secondary;
+                }
+
+                @include breakpoint-above(md) {
+                    width: auto;
+
+                    &:hover, &:focus-within {
+                        border:none
+                    }
+                }
+            }  
+        }
+    }
+
+    &__main {
+        margin: toRem(20) 0;
+    }
+
+     &__footer {
+        width: 100%;
+        // height: toRem(100);
+        background-color: $color_primary;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        z-index: 10;
+        box-shadow: 5px -5px 10px -2px black;
+
+
+        @include breakpoint-above(md) {
+            max-width: toRem(1064);
+            border-top-left-radius: toRem(20);
+            border-top-right-radius: toRem(20);
+        }
+
+        &__logo {
+            margin: 0 toRem(10);
+        }
+     }
+}

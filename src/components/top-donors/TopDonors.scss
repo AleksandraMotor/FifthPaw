@@ -1,0 +1,20 @@
+@import '../../scss/functions/px-to-rem.scss';
+@import '../../scss/mixins/breakpoints.scss';
+@import '../../scss/mixins/variables.scss';
+
+.top-donors {
+    width: 100%;
+    height: toRem(150);
+    background-image: linear-gradient($color_brighter, $color_primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: toRem(30);
+    overflow-x: hidden;
+
+    img {
+        max-height: toRem(80);
+        width: auto;
+        max-width: toRem(200);
+    }
+}
