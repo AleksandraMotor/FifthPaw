@@ -9,11 +9,11 @@
 
     &__section {
         width: 100vw;
-        margin: toRem(50) auto;
+        margin: toRem(16) auto;
 
         &__title {
             color: $color_light;
-            font-size: toRem(38);
+            font-size: toRem(32);
             text-align: center;
             text-transform: capitalize;
             -webkit-text-stroke: toRem(1) $bg_color;

@@ -9,6 +9,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 
     &::before {
         content: " ";
@@ -178,21 +179,29 @@
     }
 
     &__main {
-        margin: toRem(20) 0;
-    }
-
-     &__footer {
-        width: 100%;
-        background-color: $color_primary;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        position: relative;
-        z-index: 10;
-        box-shadow: 5px -5px 10px -2px black;
-
+        margin-top: toRem(20);
+        margin-bottom: toRem(500);
 
         @include breakpoint-above(md) {
+            margin-bottom: toRem(150);
+        }
+    }
+
+    &__footer {
+        width: 100%;
+        position: absolute;
+        bottom: toRem(-500px);
+        background-color: $color_primary;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 10;
+        box-shadow: 5px -5px 10px -2px black;
+        animation: move-down 1.5s forwards;
+
+        @include breakpoint-above(md) {
+            flex-direction: row;
             max-width: toRem(1064);
             border-top-left-radius: toRem(20);
             border-top-right-radius: toRem(20);
@@ -201,7 +210,7 @@
         &__logo {
             margin: 0 toRem(10);
         }
-     }
+    }
 }
 
 @keyframes move-in {
@@ -210,6 +219,15 @@
     }
     to {
         top: toRem(0);
+    }
+}
+
+@keyframes move-down {
+    from {
+        bottom: toRem(-500);
+    }
+    to {
+        bottom: toRem(25);
     }
 }
 
