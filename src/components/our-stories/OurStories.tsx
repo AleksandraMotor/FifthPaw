@@ -1,6 +1,7 @@
 import StoriesCard from '../templates/stories-card/StoriesCard';
-import './OurStories.scss';
 import { OurStoriesData } from './OurStoriesData';
+
+import './OurStories.scss';
 
 const OurStories: React.FC = () => {
     return (

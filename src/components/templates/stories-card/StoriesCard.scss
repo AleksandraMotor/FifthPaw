@@ -16,6 +16,11 @@
     margin-top: toRem(80);
     box-shadow: 5px 5px 10px -2px black;
     padding: toRem(20);
+    cursor: pointer;
+
+    &:hover {
+        scale: 1.05;
+    }
 
     &__image {
         position: absolute;

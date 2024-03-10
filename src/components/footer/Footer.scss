@@ -4,17 +4,18 @@
 
 .footer {
     display: flex;
+    flex-direction: column;
     gap: toRem(20);
     margin: 0 toRem(10);
     color: $color_light;
     text-transform: uppercase;
 
+    @include breakpoint-above(md) {
+        flex-direction: row;
+    }
+
     &__list {
         padding: toRem(20);
-
-        // &__title {
-
-        // }
 
         &__item {
             display: flex;
