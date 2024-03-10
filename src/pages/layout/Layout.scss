@@ -33,6 +33,7 @@
     &__menu {
         width: 100%;
         height: toRem(100);
+        top: toRem(-100);
         background-color: $color_primary;
         display: flex;
         align-items: center;
@@ -40,6 +41,7 @@
         position: relative;
         z-index: 10;
         box-shadow: 5px 5px 10px -2px black;
+        animation: move-in 1.5s forwards;
 
 
         @include breakpoint-above(md) {
@@ -50,12 +52,68 @@
 
         &__logo {
             margin: 0 toRem(10);
+            cursor: pointer;
         }
 
         &__burger {
             fill: $color_light;
             font-size: toRem(34);
             margin: toRem(20);
+            position: relative;
+            width: toRem(40);
+            height: toRem(30);
+            background: transparent;
+            cursor: pointer;
+            display: block;
+
+            &__line {
+                display: block;
+                position: absolute;
+                height: 4px;
+                width: 100%;
+                background: $color_light;
+                border-radius: toRem(30);
+                opacity: 1;
+                left: 0;
+                transform: rotate(0deg);
+                transition: .6s ease-in-out;
+
+                &:nth-of-type(1) {
+                    top: 0px;
+                    transform-origin: left center;
+                  }
+                  
+                &:nth-of-type(2) {
+                    top: 50%;
+                    transform: translateY(-50%);
+                    transform-origin: left center;
+                  }
+                  
+                &:nth-of-type(3) {
+                    top: 100%;
+                    transform-origin: left center;
+                    transform: translateY(-100%);
+                }
+
+                &--hide {
+                    &:nth-of-type(1) {
+                        transform: rotate(45deg);
+                        top: 0px;
+                        left: 5px;
+                    }
+                      
+                    &:nth-of-type(2) {
+                        width: 0%;
+                        opacity: 0;
+                    }
+                      
+                    &:nth-of-type(3) {
+                        transform: rotate(-45deg);
+                        top: 28px;
+                        left: 5px;
+                    }
+                }
+            }
         }
 
         &__navigation {
@@ -63,6 +121,7 @@
             top: toRem(100);
             background-color: $bg_color;
             opacity: 0.8;
+            z-index: 1;
             left: 0;
             width: 100%;
             display: flex;
@@ -72,6 +131,7 @@
             font-size: toRem(18);
             text-transform: uppercase;
             letter-spacing: toRem(1.2);
+            animation: move-out 1.5s both;
 
             &--hide {
                 display: none;
@@ -123,7 +183,6 @@
 
      &__footer {
         width: 100%;
-        // height: toRem(100);
         background-color: $color_primary;
         display: flex;
         align-items: center;
@@ -143,4 +202,22 @@
             margin: 0 toRem(10);
         }
      }
+}
+
+@keyframes move-in {
+    from {
+        top: toRem(-100);
+    }
+    to {
+        top: toRem(0);
+    }
+}
+
+@keyframes move-out {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 0.8;
+    }
 }

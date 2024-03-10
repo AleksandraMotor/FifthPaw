@@ -35,8 +35,8 @@ export default function App() {
 
     return (
         <div className="app">
-            <span>Width: {screenSize.width}</span>
-            <span>Height: {screenSize.height}</span>
+            {/* <span>Width: {screenSize.width}</span>
+            <span>Height: {screenSize.height}</span> */}
             <Layout screenWidth={screenSize.width}/>
         </div>
     );

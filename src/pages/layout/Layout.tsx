@@ -28,6 +28,7 @@ class Layout extends React.Component<{ screenWidth: number }, {currentView: stri
 
         return (
             <div className='layout'>
+                
                 {/* <span>{this.props.screenWidth}</span> */}
                 <nav className='layout__menu'>
                     <div
@@ -41,14 +42,23 @@ class Layout extends React.Component<{ screenWidth: number }, {currentView: stri
                             className='layout__menu__burger'
                             onClick={() => this.setState({menu: !this.state.menu})}
                         >
-                            {this.state.menu && (
-                                <svg xmlns="http://www.w3.org/2000/svg" height="38" viewBox="0 -960 960 960" width="38"><path d="M480-424 284-228q-11 11-28 11t-28-11q-11-11-11-28t11-28l196-196-196-196q-11-11-11-28t11-28q11-11 28-11t28 11l196 196 196-196q11-11 28-11t28 11q11 11 11 28t-11 28L536-480l196 196q11 11 11 28t-11 28q-11 11-28 11t-28-11L480-424Z"/></svg>
-                            )}
-                            {!this.state.menu && (
-                                <svg xmlns="http://www.w3.org/2000/svg" height="38" viewBox="0 -960 960 960" width="38"><path d="M160-240q-17 0-28.5-11.5T120-280q0-17 11.5-28.5T160-320h640q17 0 28.5 11.5T840-280q0 17-11.5 28.5T800-240H160Zm0-200q-17 0-28.5-11.5T120-480q0-17 11.5-28.5T160-520h640q17 0 28.5 11.5T840-480q0 17-11.5 28.5T800-440H160Zm0-200q-17 0-28.5-11.5T120-680q0-17 11.5-28.5T160-720h640q17 0 28.5 11.5T840-680q0 17-11.5 28.5T800-640H160Z"/></svg>
-                            )}
+                            <span className={classNames({
+                                'layout__menu__burger__line':true,
+                                'layout__menu__burger__line--hide': this.state.menu,
+                            })}
+                            ></span>
+                            <span className={classNames({
+                                'layout__menu__burger__line':true,
+                                'layout__menu__burger__line--hide': this.state.menu,
+                            })}
+                            ></span>
+                            <span className={classNames({
+                                'layout__menu__burger__line':true,
+                                'layout__menu__burger__line--hide': this.state.menu,
+                            })}
+                            ></span>
                         </div> 
-                    )}
+                        )}
                     <div className={classNames({
                         'layout__menu__navigation': true,
                         'layout__menu__navigation--hide': (!this.state.menu),
