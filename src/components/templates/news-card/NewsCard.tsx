@@ -10,8 +10,12 @@ interface NewsCardProps {
 };
 
 const NewsCard: React.FC<NewsCardProps> = ({ type, title, img, text }) => {
+    const handleDragStart = (e: { preventDefault: () => any; }) => e.preventDefault();
     return (
-        <div className='news-card'>
+        <div 
+            className='news-card' 
+            onDragStart={handleDragStart}         
+        >
             <svg
                 className={classNames({
                     'news-card__pin': true,
@@ -22,7 +26,7 @@ const NewsCard: React.FC<NewsCardProps> = ({ type, title, img, text }) => {
                 <path d="M48.7828 0.637059L41.1864 52.0403L0.468091 19.76L48.7828 0.637059Z" fill="currentColor"/>
             </svg>
             <span className='news-card__title'>{title}</span>
-            <img className='news-card__image' src={img} alt={title} />
+            <img className='news-card__image' src={img} alt={title}/>
             <span className='news-card__text'>{text}</span>
         </div>
     );

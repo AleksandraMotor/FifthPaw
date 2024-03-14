@@ -3,9 +3,9 @@ import classNames from "classnames";
 import logo from '../../assets/logos/logo.png';
 import Home from "../home/Home";
 import WorkInProgress from "../../components/work-in-progress/WorkInProgress";
+import Footer from "../../components/footer/Footer";
 
 import './Layout.scss';
-import Footer from "../../components/footer/Footer";
 
 class Layout extends React.Component<{ screenWidth: number }, {currentView: string, menu: boolean}> {
 
