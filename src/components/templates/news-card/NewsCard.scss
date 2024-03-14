@@ -14,7 +14,7 @@
     color: $color_light;
     background-color: $color_primary;
     border-radius: toRem(30);
-    margin-top: toRem(30);
+    margin: toRem(30) auto;
     padding: toRem(30);
     box-shadow: 5px 5px 10px -2px black;
     cursor: pointer;

@@ -12,9 +12,16 @@
     gap: toRem(30);
     overflow-x: hidden;
 
-    img {
-        max-height: toRem(80);
-        width: auto;
-        max-width: toRem(200);
+    &__logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: toRem(15);
+
+        img {
+            max-height: toRem(80);
+            width: auto;
+            max-width: toRem(200); 
+        }
     }
 }
