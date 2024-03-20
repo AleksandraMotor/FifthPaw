@@ -1,0 +1,17 @@
+@import '../../scss/functions/px-to-rem.scss';
+@import '../../scss/mixins/breakpoints.scss';
+@import '../../scss/mixins/variables.scss';
+
+.adoption {
+    &__header {
+        text-align: center;
+        font-size: toRem(48);
+        line-height: toRem(50);
+        text-transform: capitalize;
+        color: $color_light;
+        font-weight: 500;
+        margin: toRem(10);
+        -webkit-text-stroke: toRem(1) $bg_color;
+        text-shadow: 2px 2px 5px black;
+    }
+}

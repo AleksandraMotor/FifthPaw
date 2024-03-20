@@ -4,6 +4,7 @@ import logo from '../../assets/logos/logo.png';
 import Home from "../home/Home";
 import WorkInProgress from "../../components/work-in-progress/WorkInProgress";
 import Footer from "../../components/footer/Footer";
+import Adoption from "../adoption/Adoption";
 
 import './Layout.scss';
 
@@ -18,7 +19,7 @@ class Layout extends React.Component<{ screenWidth: number }, {currentView: stri
         const switchView = () => {
             switch(this.state.currentView) {
                 case 'home': return <Home/>;
-                case 'adopt': return <WorkInProgress/>;
+                case 'adopt': return <Adoption/>;
                 case 'news': return <WorkInProgress/>;
                 case 'help': return <WorkInProgress/>;
                 case 'about us': return <WorkInProgress/>;
