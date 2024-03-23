@@ -29,7 +29,6 @@ class Layout extends React.Component<{ screenWidth: number }, {currentView: stri
 
         return (
             <div className='layout'>
-                
                 {/* <span>{this.props.screenWidth}</span> */}
                 <nav className='layout__menu'>
                     <div

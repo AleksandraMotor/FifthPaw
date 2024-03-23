@@ -8,6 +8,7 @@
     border-radius: toRem(30);
     background-color: $color_primary;
     color: $color_light;
+    box-shadow: 5px 5px 10px -2px black;
 
     &__name {
         font-size: toRem(18);

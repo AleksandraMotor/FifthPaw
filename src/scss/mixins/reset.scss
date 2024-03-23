@@ -15,3 +15,15 @@ html {
   display: block;
   clear: both;
 }
+
+select:focus-visible {
+  outline: none;
+  opacity: 1;
+  box-shadow: 5px 5px 10px -6px black;
+}
+
+input:focus-visible {
+  outline: none;
+  box-shadow: 5px 5px 10px -6px black;
+  opacity: 1;
+}
