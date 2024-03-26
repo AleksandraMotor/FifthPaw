@@ -3,6 +3,10 @@
 @import '../../scss/mixins/variables.scss';
 
 .adoption {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     &__header {
         text-align: center;
         font-size: toRem(48);

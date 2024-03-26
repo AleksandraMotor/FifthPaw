@@ -9,6 +9,17 @@
     background-color: $color_primary;
     color: $color_light;
     box-shadow: 5px 5px 10px -2px black;
+    border: toRem(2) solid transparent;
+    margin: toRem(10) 0;
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: 0px 0px 10px -2px $color_brighter;
+    }
+
+    &--active {
+        border: toRem(2) solid $color_secondary;
+    }
 
     &__name {
         font-size: toRem(18);

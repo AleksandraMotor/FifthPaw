@@ -1,3 +1,6 @@
+import { useState } from 'react';
+import classNames from 'classnames';
+import AdoptionCardModal from '../adoption-card-modal/AdoptionCardModal';
 
 import './AdoptionCard.scss';
 
@@ -9,11 +12,24 @@ interface AdoptionCardProps {
     age: string;
     desc1: string;
     desc2: string;
+    url: string;
+    breed: string;
 };
 
-const AdoptionCard: React.FC<AdoptionCardProps> = ({ id, name, img, gender, age, desc1, desc2 }) => {
+const AdoptionCard: React.FC<AdoptionCardProps> = ({ id, name, img, gender, age, desc1, desc2, url, breed }) => {
+    const [showModal, setShowModal] = useState(false);
+    
     return (
-        <div className='adoption-card'>
+        <div
+            onClick={() => setShowModal(!showModal)}
+            className={classNames({
+                'adoption-card': true,
+                'adoption-card--active': showModal,
+            })}
+        >
+            {showModal && (
+                <AdoptionCardModal id={id} name={name} img={img} gender={gender} age={age} desc1={desc1} desc2={desc2} url={url} breed={breed}/>
+            )}
             <div className='adoption-card__name'>{name}</div>
             <div className='adoption-card__image'>
                 <img src={img} alt={name}/>

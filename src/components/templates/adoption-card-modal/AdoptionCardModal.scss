@@ -1,0 +1,102 @@
+@import '../../../scss/mixins/breakpoints.scss';
+@import '../../../scss/mixins/variables.scss';
+@import '../../../scss/functions/px-to-rem.scss';
+
+.adoption-card-modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(245, 245, 245, 0.3);
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 5px 5px 10px -2px black;
+
+    &__container {
+        background-color: $bg_color;
+        border-radius: toRem(30);
+        display: flex;
+        flex-direction: column;
+        padding: toRem(25);
+        width: 100%;
+        max-width: toRem(1064);
+
+        &__details {
+            display: flex;
+            justify-content: space-between;
+            gap: toRem(15);
+            flex-wrap: wrap;
+            color: $color_light;
+
+            &__image {
+                margin: 0 auto;
+                background-color: $color_primary;
+                border-radius: toRem(30);
+                display: flex;
+                box-shadow: 5px 5px 10px -2px black;
+
+                img {
+                    max-width: toRem(300);
+                    max-height: toRem(300);
+                    border-radius: toRem(30);
+                    border: toRem(4) double $color_brighter;
+
+                    @include breakpoint-above(xs) {
+                        max-width: toRem(400);
+                        max-height: toRem(400);
+                    }
+                }
+            }
+
+            &__content {
+                font-size: toRem(18);
+                line-height: toRem(24);
+                max-width: 100%;
+                display: flex;
+                flex-direction: column;
+                text-wrap: wrap;
+
+                @include breakpoint-above(sm) {
+                    max-width: toRem(500);
+                    padding: toRem(10);
+                }
+
+                & > * {
+                    margin-bottom: toRem(10);
+                    display: flex;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        max-width: toRem(24);
+                        max-height: toRem(24);
+                        margin-right: toRem(10);
+                    }
+                }
+
+                &__header {
+                    font-size: toRem(24);
+                    line-height: toRem(24);
+                    margin: toRem(10) 0;
+                }
+            }
+        }
+
+        &__link {
+            text-decoration: none;
+            color: $color_light;
+            font-size: toRem(18);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: underline;
+
+            svg {
+                margin-right: toRem(10);
+            }
+        }
+    }
+}

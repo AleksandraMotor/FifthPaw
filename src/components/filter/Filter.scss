@@ -13,6 +13,7 @@
     background-color: $color_brighter;
     padding: toRem(20);
     box-shadow: 5px 5px 10px -2px black;
+    margin: 0 auto;
 
     @include breakpoint-above(md) {
         border-radius: toRem(30);
@@ -282,4 +283,13 @@
             }
         }
     }
+}
+
+.filter-result {
+    margin: toRem(20) 0;
+    width: 100%;
+    max-width: toRem(1064);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
