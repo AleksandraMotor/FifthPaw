@@ -158,6 +158,11 @@ const Filter: React.FC = () => {
                         breed={item.breed}
                     />
                 ))}
+                {filteredData.length === 0 && (
+                    <span className='filter-result__no-results'>
+                        A może papugę?
+                    </span>
+                )}
             </div>
         </>
     );

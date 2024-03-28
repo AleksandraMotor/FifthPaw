@@ -32,19 +32,19 @@ const AdoptionCardModal: React.FC<AdoptionCardModalProps> = ({ id, name, img, ge
                             {name}
                         </h2>
                         <p>
-                        <img src={tag} alt="Id zwierzęcia" />
+                            <img src={tag} alt="Id zwierzęcia" />
                             <span>{id}</span>
                         </p>
                         <p>
-                        <img src={sign} alt="Płeć zwierzęcia" />
+                            <img src={sign} alt="Płeć zwierzęcia" />
                             <span>{gender === 'male' ? 'samiec' : 'samica'}</span>
                         </p>
                         <p>
-                        <img src={calendar} alt="Wiek zwierzęcia" />
-                            <span>{age === 'young' ? 'młody' : 'senior'}</span>
+                            <img src={calendar} alt="Wiek zwierzęcia" />
+                            <span>{age === 'junior' ? 'junior' : 'senior'}</span>
                         </p>
                         <p>
-                        <img src={fingerprint} alt="Rasa zwierzęcia" />
+                            <img src={fingerprint} alt="Rasa zwierzęcia" />
                             <span>{breed}</span>
                         </p>
                         <p>

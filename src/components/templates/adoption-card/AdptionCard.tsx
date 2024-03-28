@@ -1,6 +1,10 @@
 import { useState } from 'react';
 import classNames from 'classnames';
 import AdoptionCardModal from '../adoption-card-modal/AdoptionCardModal';
+import description from '../../../assets/icons/description.png';
+import sign from '../../../assets/icons/sign.png';
+import calendar from '../../../assets/icons/calendar.png';
+import fingerprint from '../../../assets/icons/fingerprint.png';
 
 import './AdoptionCard.scss';
 
@@ -36,13 +40,24 @@ const AdoptionCard: React.FC<AdoptionCardProps> = ({ id, name, img, gender, age,
             </div>
             {(gender || age || desc1 || id) && (
                 <div className='adoption-card__info'>
-                    {gender && (
-                        <p><span>{gender}</span></p>   
-                    )}
-                    <p><span>{age}</span></p>
-                    <p><span>{desc1}</span></p>
-                    <p><span>{desc2}</span></p>
-                    <p><span>{id}</span> </p>
+                    <p>
+                        <img src={sign} alt="Płeć zwierzęcia" />
+                        <span>{gender === 'male' ? 'samiec' : 'samica'}</span>
+                    </p>
+                    <p>
+                        <img src={calendar} alt="Wiek zwierzęcia" />
+                        <span>{age === 'young' ? 'junior' : 'senior'}</span>
+                    </p>
+                    <p>
+                        <img src={fingerprint} alt="Rasa zwierzęcia" />
+                        <span>{breed}</span>
+                    </p>
+                    <p className='adoption-card__info__description'>
+                        <img src={description} alt="Opis zwierzęcia" />
+                        <span className='adoption-card__info__description__content'>
+                            {desc1}
+                        </span>
+                    </p>
                 </div>
             )}
             
