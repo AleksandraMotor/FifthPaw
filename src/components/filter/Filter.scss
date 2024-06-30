@@ -292,4 +292,14 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+
+    &__other {
+
+        &__header {
+           font-size: toRem(32);
+           text-align: center;
+        }
+        
+
+    }
 }

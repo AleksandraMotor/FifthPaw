@@ -50,7 +50,7 @@
 
         & > p {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             gap: toRem(5);
             padding-bottom: toRem(5);
         }

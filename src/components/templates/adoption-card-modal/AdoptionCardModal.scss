@@ -13,7 +13,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 5px 5px 10px -2px black;
 
     &__container {
         background-color: $bg_color;
@@ -23,9 +22,30 @@
         padding: toRem(25);
         width: 100%;
         max-width: toRem(1064);
+        max-height: 95%;
+        position: relative;
+        box-shadow: 5px 5px 10px -2px black;
+
+        &__close {
+            position: absolute;
+            top: toRem(15);
+            right: toRem(15);
+            background-color: $color_brighter;
+            color: $color_light;
+            background-color: $color_primary;
+            border-radius: toRem(30);
+            border: toRem(4) double $color_light;
+            width: toRem(50);
+            height: toRem(50);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
 
         &__details {
             display: flex;
+            align-items: center;
             justify-content: space-between;
             gap: toRem(15);
             flex-wrap: wrap;
@@ -39,12 +59,13 @@
                 box-shadow: 5px 5px 10px -2px black;
 
                 img {
-                    max-width: toRem(300);
-                    max-height: toRem(300);
+                    max-width: toRem(200);
+                    max-height: toRem(200);
+                    background-color: $color_primary;
                     border-radius: toRem(30);
-                    border: toRem(4) double $color_brighter;
+                    border: toRem(4) double $color_light;
 
-                    @include breakpoint-above(xs) {
+                    @include breakpoint-above(sm) {
                         max-width: toRem(400);
                         max-height: toRem(400);
                     }
@@ -52,22 +73,25 @@
             }
 
             &__content {
-                font-size: toRem(18);
-                line-height: toRem(24);
+                font-size: toRem(16);
+                line-height: toRem(20);
+                letter-spacing: toRem(0.8);
+                text-shadow: 2px 2px 5px black;
                 max-width: 100%;
                 display: flex;
                 flex-direction: column;
                 text-wrap: wrap;
 
-                @include breakpoint-above(sm) {
+                @include breakpoint-above(md) {
                     max-width: toRem(500);
+                    font-size: toRem(18);
+                    line-height: toRem(24);
                     padding: toRem(10);
                 }
 
                 & > * {
                     margin-bottom: toRem(10);
                     display: flex;
-                    align-items: center;
 
                     img {
                         width: 100%;
@@ -94,6 +118,7 @@
             align-items: center;
             justify-content: center;
             text-decoration: underline;
+            width: auto;
 
             svg {
                 margin-right: toRem(10);

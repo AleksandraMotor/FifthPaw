@@ -3,6 +3,7 @@ import { AdoptionData } from '../../pages/adoption/AdoptionData';
 import AdoptionCard from '../templates/adoption-card/AdptionCard';
 import dogs from '../../assets/images/dogs.jpg';
 import cats from '../../assets/images/cats.jpg';
+import parrot from '../../assets/images/parrot.jpg';
 import classNames from 'classnames';
 
 import './Filter.scss';
@@ -156,12 +157,25 @@ const Filter: React.FC = () => {
                         desc2={item.desc2}
                         url={item.url}
                         breed={item.breed}
+                        funds={item.funds}
                     />
                 ))}
                 {filteredData.length === 0 && (
-                    <span className='filter-result__no-results'>
-                        A może papugę?
-                    </span>
+                    <div className='filter-result__other'>
+                        <h2 className='filter-result__other__header'>A może papugę?</h2>
+                        <AdoptionCard
+                            id='Nimfa180817'
+                            name='Nimfa'
+                            img={parrot}
+                            gender='samica'
+                            age='junior'
+                            desc1='Odłowiona w rejonie Boczna Lubomelskiej/Leszczyńskiego. Papuga posiada obrączkę - właściciel powinien znać jej numer.'
+                            desc2='Zwierzęta egzotyczne muszą mieć zapewnione warunki optymalne dla potrzeb konkretnego gatunku, co wymaga odpowiedniej wiedzy i zaplecza. Zastrzegamy sobie prawo do późniejszych wizyt kontrolnych.'
+                            url='https://www.schronisko-zwierzaki.lublin.pl/index.php?option=com_djcatalog&view=showItem&id=2823&cid=11&Itemid=47'
+                            breed='Nymphicus hollandicus'
+                            funds={24}
+                        />
+                    </div>
                 )}
             </div>
         </>
