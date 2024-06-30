@@ -1,0 +1,305 @@
+@import '../../scss/functions/px-to-rem.scss';
+@import '../../scss/mixins/variables.scss';
+@import '../../scss/mixins/breakpoints.scss';
+
+.filter {
+    width: 100%;
+    max-width: toRem(1064);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: toRem(10);
+    background-color: $color_brighter;
+    padding: toRem(20);
+    box-shadow: 5px 5px 10px -2px black;
+    margin: 0 auto;
+
+    @include breakpoint-above(md) {
+        border-radius: toRem(30);
+    }
+
+    &__type {
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: toRem(10);
+
+        @include breakpoint-above(xs) {
+            flex-direction: row;
+        }
+
+        &__option {
+            width: 100%;
+            height: toRem(150);
+            border-radius: toRem(25);
+            border: toRem(6) double $bg_color;;
+            cursor: pointer;
+            overflow: hidden;
+            opacity: 0.9;
+            position: relative;
+
+            &:hover {
+                opacity: 1;
+            }
+
+            @include breakpoint-above(xs) {
+                width: 45%;
+            }
+
+            @include breakpoint-above(md) {
+                height: toRem(200);
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: toRem(20);
+            }
+
+            &:hover img {
+                scale: 1.1;
+            }
+
+            &__label {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background-image: linear-gradient(transparent 10%, $color_light 120%);
+                color: $bg_color;
+                text-align: center;
+                font-size: toRem(18);
+                font-weight: 600;
+            }
+
+            &--dogs {
+                img {
+                    filter: brightness(135%)
+                }
+            }
+
+            &--inactive {
+                filter: grayscale(50%);
+            }
+        }
+    }
+
+    &__age {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        align-self: center;
+
+        &__label {
+            color: $bg_color;
+            font-size: toRem(16);
+            font-weight: 600;
+            margin-bottom: toRem(4);
+            margin-left: toRem(12);
+        }
+
+        &__select {
+            color: $bg_color;
+            background-color: $color_light;
+            font-size: toRem(18);
+            font-weight: 600;
+            letter-spacing: toRem(1);
+            padding: toRem(4) toRem(8);
+            padding-left: toRem(5);
+            border: toRem(4) double $bg_color;
+            border-radius: toRem(30);
+            cursor: pointer;
+            opacity: 0.6;
+
+            &:hover {
+                opacity: 0.8;
+                box-shadow: 5px 5px 10px -6px black;
+            }
+
+            &__option {
+                background-color: $color_brighter;
+                color: $bg_color;
+                font-weight: 600;
+                letter-spacing: toRem(1);
+            }
+        }
+    }
+
+    &__gender {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        &__label {
+            color: $bg_color;
+            font-size: toRem(16);
+            letter-spacing: toRem(0.4);
+            font-weight: 500;
+            margin-bottom: toRem(2);
+            margin-left: toRem(12);
+        }
+        
+        &__select {
+            color: $color_light;
+            background-color: $bg_color;
+            font-size: toRem(18);
+            font-weight: 400;
+            letter-spacing: toRem(1);
+            padding: toRem(4) toRem(8);
+            padding-left: toRem(5);
+            border: toRem(4) double $color_light;
+            border-radius: toRem(30);
+            cursor: pointer;
+            opacity: 0.6;
+
+            &:hover {
+                opacity: 0.8;
+                box-shadow: 5px 5px 10px -6px black;
+            }
+
+            &__option {
+                background-color: $color_brighter;
+                color: $bg_color;
+                font-weight: 600;
+                letter-spacing: toRem(1);
+            }
+        }
+    }
+
+    &__breed {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        &__label {
+            color: $bg_color;
+            font-size: toRem(16);
+            font-weight: 600;
+            margin-bottom: toRem(4);
+            margin-left: toRem(12);
+        }
+
+        &__select {
+            color: $bg_color;
+            background-color: $color_light;
+            font-size: toRem(18);
+            font-weight: 600;
+            letter-spacing: toRem(1);
+            padding: toRem(4) toRem(8);
+            padding-left: toRem(5);
+            border: toRem(4) double $bg_color;
+            border-radius: toRem(30);
+            cursor: pointer;
+            opacity: 0.6;
+
+            &:hover {
+                opacity: 0.8;
+                box-shadow: 5px 5px 10px -6px black;
+            }
+
+            &__option {
+                background-color: $color_brighter;
+                color: $bg_color;
+                font-weight: 600;
+                letter-spacing: toRem(1);
+            }
+        }
+    }
+
+    &__other {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+        gap: toRem(10);
+        
+        &__search {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            position: relative;
+    
+            &__label {
+                position: absolute;
+                bottom: toRem(8);
+                right: toRem(16);
+                color: $bg_color;
+            }
+    
+            &__input {
+                color: $bg_color;
+                background-color: $color_light;
+                font-size: toRem(18);
+                font-weight: 600;
+                letter-spacing: toRem(1);
+                padding: toRem(4) toRem(8);
+                padding-left: toRem(5);
+                border: toRem(4) double $bg_color;
+                border-radius: toRem(30);
+                cursor: pointer;
+                opacity: 0.6;
+    
+                &::placeholder {
+                    font-size: toRem(18);
+                    height: toRme(40);
+                    color: $bg_color;
+                }
+                
+                &:hover {
+                    box-shadow: 5px 5px 10px -6px black;
+                    opacity: 0.8;
+                }
+            }
+        }
+    
+        &__clear {
+            display: flex;
+            align-items: center;
+            color: $color_light;
+            background-color: $bg_color;
+            font-size: toRem(18);
+            font-weight: 400;
+            letter-spacing: toRem(1);
+            padding: toRem(4) toRem(8);
+            border: toRem(4) double $color_light;
+            border-radius: toRem(30);
+            cursor: pointer;
+            opacity: 0.6;
+    
+            &:hover {
+                opacity: 0.8;
+                box-shadow: 5px 5px 10px -6px black;
+            }
+    
+            &__text {
+                margin-right: toRem(6);
+                line-height: toRem(18);
+            }
+        }
+    }
+}
+
+.filter-result {
+    margin: toRem(20) 0;
+    width: 100%;
+    max-width: toRem(1064);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    &__other {
+
+        &__header {
+           font-size: toRem(32);
+           text-align: center;
+        }
+        
+
+    }
+}

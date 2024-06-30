@@ -1,0 +1,69 @@
+@import '../../../scss/mixins/breakpoints.scss';
+@import '../../../scss/mixins/variables.scss';
+@import '../../../scss/functions/px-to-rem.scss';
+
+.adoption-card {
+    width: toRem(345);
+    height: toRem(370);
+    border-radius: toRem(30);
+    background-color: $color_primary;
+    color: $color_light;
+    letter-spacing: toRem(0.8);
+    text-shadow: 2px 2px 5px black;
+    box-shadow: 5px 5px 10px -2px black;
+    border: toRem(2) solid transparent;
+    padding: toRem(20);
+    margin: toRem(10) 0;
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: 0px 0px 10px -2px $color_brighter;
+    }
+
+    &--active {
+        border: toRem(2) solid $color_secondary;
+    }
+
+    &__name {
+        font-size: toRem(18);
+        text-transform: uppercase;
+    }
+
+    &__image {
+        width: toRem(150);
+        height: toRem(150);
+        margin: toRem(8) auto;
+
+        img {
+            width: 100%;
+            height: 100%;
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+            border: toRem(4) double $color_brighter;
+            border-radius: toRem(15);
+        }
+    }
+
+    &__info {
+        font-size: toRem(16);
+
+        & > p {
+            display: flex;
+            align-items: flex-start;
+            gap: toRem(5);
+            padding-bottom: toRem(5);
+        }
+
+        &__description {
+            &__content {
+                max-width: toRem(300);
+                display: -webkit-box; 
+                -webkit-box-orient: vertical; 
+                -webkit-line-clamp: 2; 
+                overflow: hidden; 
+                text-overflow: ellipsis;
+            }
+        } 
+    }
+}

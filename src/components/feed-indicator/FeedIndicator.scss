@@ -1,0 +1,154 @@
+@import '../../scss/functions/px-to-rem.scss';
+@import '../../scss/mixins/variables.scss';
+@import '../../scss/mixins/breakpoints.scss';
+
+.feed-indicator {
+    display: flex;
+    flex-direction: column;
+    gap: toRem(10);
+    align-items: center;
+    justify-content: center;
+    margin: toRem(20) 0;
+    color: $color_light;
+    text-shadow: 2px 2px 5px black;
+
+    @include breakpoint-above(sm) {
+        flex-direction: row;
+    }
+
+    &__full {
+        font-size: toRem(24);
+    }
+
+    &__box {
+        width: 100%;
+        height: toRem(32);
+        position: relative;
+        border-radius: toRem(30);
+        border: toRem(4) double $color_primary;
+        margin: 0 toRem(10);
+        box-shadow: 5px 5px 10px -2px black;
+
+        &__text {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-size: toRem(18);
+            font-weight: 600;
+            color: $color_secondary;
+            line-height: toRem(20);
+            text-shadow: 2px 2px 5px $bg_color;
+        }
+
+        &__value {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: toRem(24);
+            width: 0;
+            background-color: $color_brighter;
+            border-radius: toRem(30);
+            border: toRem(1) solid $color_brighter;
+            box-shadow: inset -2px -2px 4px 2px $color_primary;
+            transition: width 1s;
+        }
+    }
+
+    &__button {
+        width: toRem(180);
+        display: flex;
+        align-items: center;
+        gap: toRem(10);
+        font-size: toRem(24);
+        line-height: toRem(24);
+        font-weight: 500;
+        letter-spacing: toRem(1);
+        color: $color_light;
+        background-color: $color_primary;
+        border-radius: toRem(30);
+        border: toRem(4) double $color_light;
+        padding: toRem(12) toRem(24);
+        box-shadow: 5px 5px 10px -2px black;
+        text-shadow: 2px 2px 5px black;
+        cursor: pointer;
+        position: relative;
+
+        &:hover {
+            animation: jelly 0.5s 0.2s linear;
+        }
+
+        &__icon {
+            max-height: toRem(24);
+            rotate: 20deg;
+        }
+
+        &__tooltip {
+            display: none;
+            position: absolute;
+            bottom: 0;
+            right: toRem(10);
+            font-size: toRem(18);
+            background-color: $color_secondary;
+            border-radius: toRem(15);
+            border-bottom-right-radius: 0;
+            padding: toRem(4) toRem(8);
+            opacity: 0;
+            
+            &--active {
+                display: block;
+                animation: show-tooltip 5s;
+            }  
+        }
+    }
+}
+
+@keyframes show-tooltip {
+    0% {
+        bottom: 0;
+        opacity: 0;
+    }
+    5% {
+        bottom: 80%;
+        opacity: 0;
+    }
+    20% {
+        bottom: 120%;
+        opacity: 1;
+    }
+    80% {
+        bottom: 120%;
+        opacity: 1;
+    }
+    95% {
+        bottom: 80%;
+        opacity: 0;
+    }
+    100% {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes jelly {
+    0% {
+        transform: scale(1, 1);
+    }
+    20% {
+        transform: scale(1.2, 0.8);
+    }
+    40% {
+        transform: scale(0.8, 1.2);
+    }
+    60% {
+        transform: scale(1.2, 0.8);
+    }
+    80% {
+        transform: scale(0.8, 1.2);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
