@@ -10,7 +10,7 @@ export const AdoptionData = [
         img: "https://www.kundelek.rsoz.org/wp-content/uploads/2024/02/IMG_2548-scaled.jpg",
         desc1: "Fabia trafiła do schroniska w roku 2023, mając ok. 2 lata. Jest to przyjazna, odważna kotka.",
         desc2: "Jest odrobaczona, zaszczepiona, zaczipowana i wysterylizowana.",
-        funds: 30
+        funds: 0
     },
     {
         id: 'cat124',
@@ -23,7 +23,7 @@ export const AdoptionData = [
         img: "https://www.kundelek.rsoz.org/wp-content/uploads/2024/02/425799762_780279687474396_9035989213827660437_n.jpg",
         desc1: "Klaudia trafiła do schroniska w roku 2023, mając ok. 1,5 roku. Jest to przyjazna, energiczna kotka.",
         desc2: "Jest odrobaczona, zaszczepiona, zaczipowana i wysterylizowana.",
-        funds: 20
+        funds: 50
     },
     {
         id: 'cat125',
@@ -62,7 +62,7 @@ export const AdoptionData = [
         img: "https://www.kundelek.rsoz.org/wp-content/uploads/2024/01/IMG_2729-scaled.jpg",
         desc1: "Frida trafiła do schroniska w roku 2023, mając ok. 1,5 roku. Jest to spokojna, przyjazna kotka.",
         desc2: "Jest odrobaczona, zaszczepiona, zaczipowana i wysterylizowana.",
-        funds: 100
+        funds: 93
     },
     {
         id: 'cat128',

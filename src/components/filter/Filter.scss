@@ -292,6 +292,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    color: $color_light;
 
     &__other {
 
@@ -299,7 +300,5 @@
            font-size: toRem(32);
            text-align: center;
         }
-        
-
     }
 }

@@ -8,12 +8,14 @@
     gap: toRem(10);
     align-items: center;
     justify-content: center;
+    min-height: toRem(100);
     margin: toRem(20) 0;
     color: $color_light;
     text-shadow: 2px 2px 5px $emphasis_dark;
 
     @include breakpoint-above(sm) {
         flex-direction: row;
+        min-height: toRem(60);
     }
 
     &__full {
@@ -28,6 +30,7 @@
         border: toRem(4) double $color_primary;
         margin: 0 toRem(10);
         box-shadow: 5px 5px 10px -2px $emphasis_dark;
+        overflow: hidden;
 
         &__text {
             position: absolute;
@@ -48,7 +51,7 @@
             top: 0;
             left: 0;
             height: toRem(24);
-            width: 0;
+            width: 0%;
             background-color: $color_brighter;
             border-radius: toRem(30);
             border: toRem(1) solid $color_brighter;
@@ -89,7 +92,7 @@
             display: none;
             position: absolute;
             bottom: 0;
-            right: toRem(10);
+            right: toRem(25);
             font-size: toRem(18);
             background-color: $color_secondary;
             border-radius: toRem(15);

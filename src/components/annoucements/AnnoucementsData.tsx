@@ -1,6 +1,6 @@
 import puszek from '../../assets/images/puszek.png';
 import wolontariat from '../../assets/images/wolontariat.png';
-import papuga from '../../assets/images/papuga.png';
+import parrot from '../../assets/images/parrot2.png';
 
 export const AnnoucementsData = [
     {
@@ -17,7 +17,7 @@ export const AnnoucementsData = [
     {
         type: 'urgent',
         title: 'Znaleziono',
-        img: papuga,
+        img: parrot,
         text: 'Znaleziono papuge obrączkowaną w okolicy placu zabaw przy ulicy ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
     },
     {
@@ -34,7 +34,7 @@ export const AnnoucementsData = [
     {
         type: 'urgent',
         title: 'Znaleziono2',
-        img: papuga,
+        img: parrot,
         text: 'Znaleziono papuge obrączkowaną w okolicy placu zabaw przy ulicy ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
     },
 ];
