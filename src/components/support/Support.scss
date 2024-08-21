@@ -22,7 +22,7 @@
         max-height: toRem(330);
         opacity: 0.5;
         filter: brightness(150%);
-        box-shadow: 5px 5px 10px -2px black;
+        box-shadow: 5px 5px 10px -2px $emphasis_dark;
 
         @include breakpoint-above(sm) {
             border-top-right-radius: toRem(30);
@@ -53,8 +53,8 @@
             &__title {
                 text-transform: capitalize;
                 font-size: toRem(32);
-                -webkit-text-stroke: toRem(1) $bg_color;
-                text-shadow: 2px 2px 5px black;
+                -webkit-text-stroke: toRem(1) $color_bg;
+                text-shadow: 2px 2px 5px $emphasis_dark;
             }
 
             &__text {
@@ -63,7 +63,7 @@
                 font-size: toRem(18);
                 line-height: 1.2;
                 font-weight: 300;
-                text-shadow: 2px 2px 5px black;
+                text-shadow: 2px 2px 5px $emphasis_dark;
             }
         }
     }

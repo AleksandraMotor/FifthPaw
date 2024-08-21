@@ -1,5 +1,5 @@
- import React from 'react';
- import classNames from "classnames";
+import React from 'react';
+import classNames from "classnames";
 
 import './CTAButton.scss';
 
@@ -8,16 +8,16 @@ interface CTAButtonProps {
     children: string;
 }
 
- const CTAButton: React.FC<CTAButtonProps> = ({type, children}) => {
+const CTAButton: React.FC<CTAButtonProps> = ({type, children}) => {
     return (
         <button className={classNames({
             'cta-button': true,
-            'cta-button--orange': type === 'orange',
-            'cta-button--brown': type === 'brown'
+            'cta-button--big': type === 'big',
+            'cta-button--transparent': type === 'transparent'
         })}>
             {children}
         </button>
     );
- };
+};
 
- export  default CTAButton;
+export  default CTAButton;

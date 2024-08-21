@@ -14,7 +14,7 @@
     gap: toRem(10);
     position: relative;
     margin-top: toRem(80);
-    box-shadow: 5px 5px 10px -2px black;
+    box-shadow: 5px 5px 10px -2px $emphasis_dark;
     padding: toRem(20);
     cursor: pointer;
 
@@ -29,7 +29,7 @@
         right: 0;
         margin: 0 auto;
         border-radius: 50%;
-        box-shadow: 5px 5px 10px -2px black;
+        box-shadow: 5px 5px 10px -2px $emphasis_dark;
     }
 
     &__header {
@@ -37,7 +37,7 @@
         color: $color_light;
         font-weight: 400;
         letter-spacing: toRem(1.2);
-        text-shadow: 2px 2px 5px black;
+        text-shadow: 2px 2px 5px $emphasis_dark;
 
     }
 
@@ -45,8 +45,9 @@
         font-size: toRem(14);
         font-weight: 600;
         text-align: center;
-        color: $bg_color;
+        color: $color_bg;
         max-width: toRem(200);
+        line-clamp: 4;
         display: -webkit-box; 
         -webkit-box-orient: vertical; 
         -webkit-line-clamp: 4; 

@@ -12,7 +12,7 @@
     gap: toRem(10);
     background-color: $color_brighter;
     padding: toRem(20);
-    box-shadow: 5px 5px 10px -2px black;
+    box-shadow: 5px 5px 10px -2px $emphasis_dark;
     margin: 0 auto;
 
     @include breakpoint-above(md) {
@@ -35,7 +35,7 @@
             width: 100%;
             height: toRem(150);
             border-radius: toRem(25);
-            border: toRem(6) double $bg_color;;
+            border: toRem(6) double $color_bg;
             cursor: pointer;
             overflow: hidden;
             opacity: 0.9;
@@ -71,7 +71,7 @@
                 right: 0;
                 width: 100%;
                 background-image: linear-gradient(transparent 10%, $color_light 120%);
-                color: $bg_color;
+                color: $color_bg;
                 text-align: center;
                 font-size: toRem(18);
                 font-weight: 600;
@@ -96,7 +96,7 @@
         align-self: center;
 
         &__label {
-            color: $bg_color;
+            color: $color_bg;
             font-size: toRem(16);
             font-weight: 600;
             margin-bottom: toRem(4);
@@ -104,26 +104,26 @@
         }
 
         &__select {
-            color: $bg_color;
+            color: $color_bg;
             background-color: $color_light;
             font-size: toRem(18);
             font-weight: 600;
             letter-spacing: toRem(1);
             padding: toRem(4) toRem(8);
             padding-left: toRem(5);
-            border: toRem(4) double $bg_color;
+            border: toRem(4) double $color_bg;
             border-radius: toRem(30);
             cursor: pointer;
             opacity: 0.6;
 
             &:hover {
                 opacity: 0.8;
-                box-shadow: 5px 5px 10px -6px black;
+                box-shadow: 5px 5px 10px -6px $emphasis_dark;
             }
 
             &__option {
                 background-color: $color_brighter;
-                color: $bg_color;
+                color: $color_bg;
                 font-weight: 600;
                 letter-spacing: toRem(1);
             }
@@ -136,7 +136,7 @@
         align-items: flex-start;
 
         &__label {
-            color: $bg_color;
+            color: $color_bg;
             font-size: toRem(16);
             letter-spacing: toRem(0.4);
             font-weight: 500;
@@ -146,7 +146,7 @@
         
         &__select {
             color: $color_light;
-            background-color: $bg_color;
+            background-color: $color_bg;
             font-size: toRem(18);
             font-weight: 400;
             letter-spacing: toRem(1);
@@ -159,12 +159,12 @@
 
             &:hover {
                 opacity: 0.8;
-                box-shadow: 5px 5px 10px -6px black;
+                box-shadow: 5px 5px 10px -6px $emphasis_dark;
             }
 
             &__option {
                 background-color: $color_brighter;
-                color: $bg_color;
+                color: $color_bg;
                 font-weight: 600;
                 letter-spacing: toRem(1);
             }
@@ -177,7 +177,7 @@
         align-items: flex-start;
 
         &__label {
-            color: $bg_color;
+            color: $color_bg;
             font-size: toRem(16);
             font-weight: 600;
             margin-bottom: toRem(4);
@@ -185,26 +185,26 @@
         }
 
         &__select {
-            color: $bg_color;
+            color: $color_bg;
             background-color: $color_light;
             font-size: toRem(18);
             font-weight: 600;
             letter-spacing: toRem(1);
             padding: toRem(4) toRem(8);
             padding-left: toRem(5);
-            border: toRem(4) double $bg_color;
+            border: toRem(4) double $color_bg;
             border-radius: toRem(30);
             cursor: pointer;
             opacity: 0.6;
 
             &:hover {
                 opacity: 0.8;
-                box-shadow: 5px 5px 10px -6px black;
+                box-shadow: 5px 5px 10px -6px $emphasis_dark;
             }
 
             &__option {
                 background-color: $color_brighter;
-                color: $bg_color;
+                color: $color_bg;
                 font-weight: 600;
                 letter-spacing: toRem(1);
             }
@@ -229,18 +229,18 @@
                 position: absolute;
                 bottom: toRem(8);
                 right: toRem(16);
-                color: $bg_color;
+                color: $color_bg;
             }
     
             &__input {
-                color: $bg_color;
+                color: $color_bg;
                 background-color: $color_light;
                 font-size: toRem(18);
                 font-weight: 600;
                 letter-spacing: toRem(1);
                 padding: toRem(4) toRem(8);
                 padding-left: toRem(5);
-                border: toRem(4) double $bg_color;
+                border: toRem(4) double $color_bg;
                 border-radius: toRem(30);
                 cursor: pointer;
                 opacity: 0.6;
@@ -248,11 +248,11 @@
                 &::placeholder {
                     font-size: toRem(18);
                     height: toRme(40);
-                    color: $bg_color;
+                    color: $color_bg;
                 }
                 
                 &:hover {
-                    box-shadow: 5px 5px 10px -6px black;
+                    box-shadow: 5px 5px 10px -6px $emphasis_dark;
                     opacity: 0.8;
                 }
             }
@@ -262,7 +262,7 @@
             display: flex;
             align-items: center;
             color: $color_light;
-            background-color: $bg_color;
+            background-color: $color_bg;
             font-size: toRem(18);
             font-weight: 400;
             letter-spacing: toRem(1);
@@ -274,7 +274,7 @@
     
             &:hover {
                 opacity: 0.8;
-                box-shadow: 5px 5px 10px -6px black;
+                box-shadow: 5px 5px 10px -6px $emphasis_dark;
             }
     
             &__text {

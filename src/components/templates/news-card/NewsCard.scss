@@ -16,7 +16,7 @@
     border-radius: toRem(30);
     margin: toRem(30) auto;
     padding: toRem(30);
-    box-shadow: 5px 5px 10px -2px black;
+    box-shadow: 5px 5px 10px -2px $emphasis_dark;
     cursor: pointer;
 
     &:hover {
@@ -37,7 +37,7 @@
         font-size: toRem(18);
         letter-spacing: toRem(1.2);
         text-transform: uppercase;
-        text-shadow: 2px 2px 5px black;
+        text-shadow: 2px 2px 5px $emphasis_dark;
     }
 
     &__image {
@@ -48,13 +48,12 @@
         font-size: toRem(16);
         text-align: center;
         max-width: toRem(200);
+        line-clamp: 3;
         display: -webkit-box; 
         -webkit-box-orient: vertical; 
         -webkit-line-clamp: 3; 
         overflow: hidden; 
         text-overflow: ellipsis;
-        text-shadow: 2px 2px 5px black;
+        text-shadow: 2px 2px 5px $emphasis_dark;
     }
-
-
 }

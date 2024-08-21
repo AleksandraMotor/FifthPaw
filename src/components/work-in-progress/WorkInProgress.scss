@@ -33,7 +33,7 @@
         font-style: italic;
         color: $color_secondary;
         text-shadow: 2px 2px 5px $color_secondary;
-        -webkit-text-stroke: toRem(2) $bg_color;
+        -webkit-text-stroke: toRem(2) $color_bg;
         margin: 0 toRem(15);
 
         @include breakpoint-above(xs) {

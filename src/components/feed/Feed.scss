@@ -21,7 +21,7 @@
         height: auto;
         max-height: toRem(330);
         opacity: 0.8;
-        box-shadow: -5px 5px 10px -2px black;
+        box-shadow: -5px 5px 10px -2px $emphasis_dark;
 
         @include breakpoint-above(sm) {
             border-top-left-radius: toRem(30);
@@ -46,14 +46,15 @@
             align-items: flex-start;
             justify-content: space-between;
             text-align: left;
+            margin-left: toRem(20);
         }
 
         &__content {
             &__title {
                 text-transform: capitalize;
                 font-size: toRem(32);
-                -webkit-text-stroke: toRem(1) $bg_color;
-                text-shadow: 2px 2px 5px black;
+                -webkit-text-stroke: toRem(1) $color_bg;
+                text-shadow: 2px 2px 5px $emphasis_dark;
             }
 
             &__text {
@@ -62,7 +63,7 @@
                 font-size: toRem(18);
                 line-height: 1.2;
                 font-weight: 300;
-                text-shadow: 2px 2px 5px black;
+                text-shadow: 2px 2px 5px $emphasis_dark;
             }
         }
     }
