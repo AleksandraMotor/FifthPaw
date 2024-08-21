@@ -11,9 +11,8 @@ const Support: React.FC = () => {
                 <div className='support__info__content'>
                     <h2 className='support__info__content__title'>Jak możesz pomóc?</h2>
                     <p className='support__info__content__text'>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    
                 </div>
-                <CTAButton>Wspieraj</CTAButton>
+                <CTAButton type='transparent'>Wspieraj</CTAButton>
             </div>
         </div>
     );

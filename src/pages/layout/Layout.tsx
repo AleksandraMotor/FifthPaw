@@ -120,7 +120,6 @@ class Layout extends React.Component<{ screenWidth: number }, {currentView: stri
                         onClick={(e) => this.setState({currentView: 'home'})}
                     >
                         <img src={logo} alt="Logo PiątaŁapa"/>
-                        
                     </div>
                     <Footer/>
                 </footer>

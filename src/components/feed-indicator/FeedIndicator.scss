@@ -10,7 +10,7 @@
     justify-content: center;
     margin: toRem(20) 0;
     color: $color_light;
-    text-shadow: 2px 2px 5px black;
+    text-shadow: 2px 2px 5px $emphasis_dark;
 
     @include breakpoint-above(sm) {
         flex-direction: row;
@@ -27,7 +27,7 @@
         border-radius: toRem(30);
         border: toRem(4) double $color_primary;
         margin: 0 toRem(10);
-        box-shadow: 5px 5px 10px -2px black;
+        box-shadow: 5px 5px 10px -2px $emphasis_dark;
 
         &__text {
             position: absolute;
@@ -40,7 +40,7 @@
             font-weight: 600;
             color: $color_secondary;
             line-height: toRem(20);
-            text-shadow: 2px 2px 5px $bg_color;
+            text-shadow: 2px 2px 5px $color_bg;
         }
 
         &__value {
@@ -71,8 +71,8 @@
         border-radius: toRem(30);
         border: toRem(4) double $color_light;
         padding: toRem(12) toRem(24);
-        box-shadow: 5px 5px 10px -2px black;
-        text-shadow: 2px 2px 5px black;
+        box-shadow: 5px 5px 10px -2px $emphasis_dark;
+        text-shadow: 2px 2px 5px $emphasis_dark;
         cursor: pointer;
         position: relative;
 

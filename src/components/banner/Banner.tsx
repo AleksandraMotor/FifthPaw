@@ -11,7 +11,7 @@ const Banner: React.FC = () => {
             </div>  
             <div className='banner__info'>
                 <h1 className='banner__info__header'>Nie kupuj!</h1>
-                <CTAButton type='orange'>Adoptuj!</CTAButton>
+                <CTAButton type='big'>Adoptuj!</CTAButton>
             </div>
 
         </div>

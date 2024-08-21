@@ -1,3 +1,5 @@
+@import '../mixins/variables.scss';
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -19,11 +21,11 @@ html {
 select:focus-visible {
   outline: none;
   opacity: 1;
-  box-shadow: 5px 5px 10px -6px black;
+  box-shadow: 5px 5px 10px -6px $emphasis_dark;
 }
 
 input:focus-visible {
   outline: none;
-  box-shadow: 5px 5px 10px -6px black;
+  box-shadow: 5px 5px 10px -6px $emphasis_dark;
   opacity: 1;
 }

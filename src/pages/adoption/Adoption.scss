@@ -16,7 +16,7 @@
         padding: 0 toRem(10);
         margin-top: toRem(10);
         margin-bottom: toRem(30);
-        -webkit-text-stroke: toRem(1) $bg_color;
-        text-shadow: 2px 2px 5px black;
+        -webkit-text-stroke: toRem(1) $color_bg;
+        text-shadow: 2px 2px 5px $emphasis_dark;
     }
 }

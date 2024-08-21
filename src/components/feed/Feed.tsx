@@ -12,9 +12,8 @@ const Feed: React.FC = () => {
                     <h2 className='feed__info__content__title'>Nakarm zwierzaka</h2>
                     <p className='feed__info__content__text'>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 </div>
-                <CTAButton type='brown'>Wybierz</CTAButton>
+                <CTAButton>Nakarm</CTAButton>
             </div>
-            
         </div>
     );
 };

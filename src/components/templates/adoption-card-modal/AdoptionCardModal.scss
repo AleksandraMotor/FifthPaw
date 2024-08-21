@@ -15,7 +15,7 @@
     justify-content: center;
 
     &__container {
-        background-color: $bg_color;
+        background-color: $color_bg;
         border-radius: toRem(30);
         display: flex;
         flex-direction: column;
@@ -24,7 +24,7 @@
         max-width: toRem(1064);
         max-height: 95%;
         position: relative;
-        box-shadow: 5px 5px 10px -2px black;
+        box-shadow: 5px 5px 10px -2px $emphasis_dark;
 
         &__close {
             position: absolute;
@@ -56,7 +56,7 @@
                 background-color: $color_primary;
                 border-radius: toRem(30);
                 display: flex;
-                box-shadow: 5px 5px 10px -2px black;
+                box-shadow: 5px 5px 10px -2px $emphasis_dark;
 
                 img {
                     max-width: toRem(200);
@@ -76,7 +76,7 @@
                 font-size: toRem(16);
                 line-height: toRem(20);
                 letter-spacing: toRem(0.8);
-                text-shadow: 2px 2px 5px black;
+                text-shadow: 2px 2px 5px $emphasis_dark;
                 max-width: 100%;
                 display: flex;
                 flex-direction: column;

@@ -2,7 +2,6 @@
 @import '../../scss/mixins/variables.scss';
 @import '../../scss/mixins/breakpoints.scss';
 
-
 .cta-button {
     border-radius: toRem(50);
     border: toRem(2) solid;
@@ -13,33 +12,34 @@
     color: $color_secondary;
     line-height: 1;
     padding: toRem(14) toRem(35);
-    box-shadow: 5px 5px 10px -2px $bg_color;
+    box-shadow: 5px 5px 10px -2px $color_bg;
+    cursor: pointer;
     
     &:hover {
         color: $color_light;
         background-color: $color_secondary;
     }
 
-    &--orange {
+    &--big {
         text-transform: uppercase;
         letter-spacing: toRem(1.2);
         font-size: toRem(32);
         background-color: $color_secondary;
         color: $color_light;
         border-color: $color_secondary;
-        text-shadow: 2px 2px 5px $bg_color;
+        text-shadow: 2px 2px 5px $color_bg;
 
         &:hover {
             background-color: $color_light;
-            color: $bg_color;
+            color: $color_bg;
             text-shadow: none;
             font-weight: 800;
         }
     }
 
-    &--brown {
+    &--transparent {
         background-color: $color_light;
-        color: $bg_color;
+        color: $color_bg;
         border-color: $color_secondary;
 
         &:hover {
