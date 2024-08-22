@@ -1,43 +1,62 @@
-import { useState, useEffect } from "react";
-import Layout from "../pages/layout/Layout";
+import { useState, useEffect, Component, ReactNode } from "react";
+import { BrowserRouter as Router } from 'react-router-dom';
+
+import Footer from "../components/footer/Footer";
+import Navigation from "../layouts/navigation/Navigation";
+import Page from "../layouts/page/Page";
 
 import './App.scss';
 
-const useScreenSize = () => {
-    const [screenSize, setScreenSize] = useState({
-        width: window.innerWidth,
-        height: window.innerHeight
-    });
 
-    useEffect(() => {
-        const handleResize = () => {
-            setScreenSize({
-                width: window.innerWidth,
-                height: window.innerHeight
-            });
-        };
+// const useScreenSize = () => {
+//     const [screenSize, setScreenSize] = useState({
+//         width: window.innerWidth,
+//         height: window.innerHeight
+//     });
 
-        window.addEventListener('resize', handleResize);
+//     useEffect(() => {
+//         const handleResize = () => {
+//             setScreenSize({
+//                 width: window.innerWidth,
+//                 height: window.innerHeight
+//             });
+//         };
 
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
-    }, []);
+//         window.addEventListener('resize', handleResize);
 
-    return screenSize;
+//         return () => {
+//             window.removeEventListener('resize', handleResize);
+//         };
+//     }, []);
+
+//     return screenSize;
+// };
+
+
+class App extends Component {
+    render() {
+        return (
+            <Router>
+                <div className="app">
+                {/* <span>Width: {screenSize.width}</span>
+                <span>Height: {screenSize.height}</span> */}
+                {/* <Layout screenWidth={screenSize.width}/> */}
+
+                    <nav className='app__menu'>
+                        <Navigation/>
+                    </nav>
+                    <main className='app__main'>
+                        <Page/>
+                    </main>
+                    <footer className='app__footer'>
+                        {/* <Footer/> */}
+                        Footer
+                    </footer>
+                </div>
+            </Router>
+        );
+    }
+    // const screenSize = useScreenSize();
 };
 
-
-export default function App() {
-
-    const screenSize = useScreenSize();
-
-
-    return (
-        <div className="app">
-            {/* <span>Width: {screenSize.width}</span>
-            <span>Height: {screenSize.height}</span> */}
-            <Layout screenWidth={screenSize.width}/>
-        </div>
-    );
-};
+export default App;
