@@ -1,9 +1,11 @@
+import Logo from '../../components/logo/Logo';
 
 import './Footer.scss';
 
-const Footer: React.FC = () => {
+const Footer = () => {
     return (
         <div className='footer'>
+            <Logo/>
             <div className='footer__list'>
                 <span className='footer__list__title'>adopcja</span>
             </div>

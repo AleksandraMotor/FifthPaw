@@ -4,7 +4,7 @@ import classNames from "classnames";
 import logo from '../../assets/logos/logo.png';
 import Home from "../pages/home/Home";
 import WorkInProgress from "../components/work-in-progress/WorkInProgress";
-import Footer from "../components/footer/Footer";
+import Footer from "./footer/Footer";
 import Adoption from "../pages/adoption/Adoption";
 
 import './Layout.scss';
@@ -59,7 +59,7 @@ class Layout extends React.Component<{ screenWidth: number }, {currentView: stri
                             })}
                             ></span>
                         </div> 
-                        )}
+                    )}
                     <div className={classNames({
                         'layout__menu__navigation': true,
                         'layout__menu__navigation--hide': (!this.state.menu),
