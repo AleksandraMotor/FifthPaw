@@ -2,12 +2,6 @@
 @import '../scss/mixins/variables.scss';
 @import '../scss/functions/px-to-rem.scss';
 @import '../scss/mixins/breakpoints.scss';
-// .app {
-//     width: 100%;
-//     min-height: 100vh;
-//     background-color: $color_bg;
-//     overflow: hidden;
-// }
 
 .app {
     width: 100%;
@@ -47,7 +41,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        // position: relative;
+        position: relative;
         z-index: 10;
         box-shadow: 5px 5px 10px -2px $emphasis_dark;
         animation: move-in 1.5s forwards;
@@ -111,14 +105,5 @@
     }
     to {
         bottom: toRem(25);
-    }
-}
-
-@keyframes move-out {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 0.8;
     }
 }

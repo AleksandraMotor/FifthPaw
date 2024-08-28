@@ -1,26 +1,32 @@
 import { Component } from "react";
 import { menuOptions } from "../NavigationData";
 import { NavLink } from "react-router-dom";
-import classNames from "classnames";
+import Burger from "../../../components/burger/Burger";
+
+import './NavigationMobile.scss';
 
 class NavigationMobile extends Component {
     state = {
-        showMenu: true
-    }
+        showMenu: false
+    };
+
     render() {
         const menu = menuOptions.map(option => (
-            <li key={option.name} className='navigation__link'>
+            <li key={option.name} className='navigation-mobile__link'>
                 <NavLink to={option.path}>{option.name}</NavLink>
             </li>
         ));
         return (
-            <ul className={classNames({
-                'navigation': true,
-                'navigation--hide': (!this.state.showMenu),
-            })}>
-                {menu}
-                mobile
-            </ul>
+            <>
+                <button aria-label="Show/Hide Menu" onClick={() => this.setState({showMenu: !this.state.showMenu})}>
+                    <Burger showMenu={this.state.showMenu}/>
+                </button>
+                {this.state.showMenu && (
+                   <ul className='navigation-mobile'>
+                        {menu}
+                    </ul> 
+                )}
+            </>
         );
     }
 };

@@ -1,0 +1,21 @@
+@import '../../../scss/mixins/variables.scss';
+@import '../../../scss/functions/px-to-rem.scss';
+
+.navigation-desktop {
+    display: flex;
+    justify-content: end;
+    margin: 0 toRem(10);
+    font-size: toRem(16);
+    text-transform: uppercase;
+    letter-spacing: toRem(1.2);
+    color: $color_light;
+    font-weight: 400;
+
+    &__link {
+        padding: toRem(20);
+
+        &:hover, &:focus-within {
+            text-decoration: underline;
+        }
+    }
+}
