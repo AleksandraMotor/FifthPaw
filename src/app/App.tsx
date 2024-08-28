@@ -1,5 +1,9 @@
 import { useState, useEffect } from "react";
-import Layout from "../pages/layout/Layout";
+import { HashRouter as Router } from 'react-router-dom';
+import Footer from "../layouts/footer/Footer";
+import Page from "../layouts/page/Page";
+import Logo from "../components/logo/Logo";
+import Navigation from "../layouts/navigation/Navigation";
 
 import './App.scss';
 
@@ -27,17 +31,24 @@ const useScreenSize = () => {
     return screenSize;
 };
 
-
 export default function App() {
 
     const screenSize = useScreenSize();
 
-
     return (
-        <div className="app">
-            {/* <span>Width: {screenSize.width}</span>
-            <span>Height: {screenSize.height}</span> */}
-            <Layout screenWidth={screenSize.width}/>
-        </div>
+        <Router>
+            <div className="app">
+                <nav className='app__navigation'>
+                    <Logo/>
+                    <Navigation screenWidth={screenSize.width}/>
+                </nav>
+                <main className='app__main'>
+                    <Page/>
+                </main>
+                <footer className='app__footer'>
+                    <Footer/>
+                </footer>
+            </div>
+        </Router>
     );
 };

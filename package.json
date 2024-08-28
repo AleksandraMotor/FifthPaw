@@ -1,5 +1,6 @@
 {
   "name": "fifthpaw",
+  "homepage": "https://aleksandramotor.github.io/FifthPaw/",
   "version": "1.0.0",
   "description": "Animal Shelter",
   "main": "index.js",

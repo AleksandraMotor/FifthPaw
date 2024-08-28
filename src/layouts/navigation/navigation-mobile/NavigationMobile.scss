@@ -1,0 +1,43 @@
+@import '../../../scss/mixins/variables.scss';
+@import '../../../scss/functions/px-to-rem.scss';
+
+.navigation-mobile {
+    position: absolute;
+    top: toRem(100);
+    background-color: $color_bg;
+    opacity: 0.8;
+    z-index: 1;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $color_light;
+    font-size: toRem(18);
+    text-transform: uppercase;
+    letter-spacing: toRem(1.2);
+    animation: move-out 1.5s;
+
+    &__link {
+        width: 100%;
+        padding: toRem(20);
+        text-align: center;
+        border-top: toRem(1) solid;
+        border-bottom: toRem(1) solid;
+        border-color: transparent;
+
+        &:hover, &:focus-within {
+            text-decoration: underline;
+            border-color: $color_light;
+        }
+    }
+}
+
+@keyframes move-out {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 0.8;
+    }
+}

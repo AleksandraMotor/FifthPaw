@@ -1,0 +1,6 @@
+@import '../../scss/functions/px-to-rem.scss';
+
+.logo {
+    margin: 0 toRem(10);
+    cursor: pointer;
+}

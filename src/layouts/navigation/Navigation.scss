@@ -1,0 +1,9 @@
+@import '../../scss/mixins/variables.scss';
+
+.active {
+    color: $color_secondary;
+
+    &:hover, &:focus-within {
+        text-decoration: underline;
+    }
+}
