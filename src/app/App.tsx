@@ -1,12 +1,11 @@
-import { useState, useEffect, Component, ReactNode } from "react";
+import { useState, useEffect } from "react";
 import { BrowserRouter as Router } from 'react-router-dom';
-
 import Footer from "../layouts/footer/Footer";
-import Navigation from "../layouts/navigation/Navigation";
 import Page from "../layouts/page/Page";
+import Logo from "../components/logo/Logo";
+import Navigation from "../layouts/navigation/Navigation";
 
 import './App.scss';
-
 
 const useScreenSize = () => {
     const [screenSize, setScreenSize] = useState({
@@ -32,30 +31,24 @@ const useScreenSize = () => {
     return screenSize;
 };
 
+export default function App() {
 
-class App extends Component {
-    render() {
-        const screenSize = useScreenSize();
-        return (
-            <Router>
-                <div className="app">
-                {/* <span>Width: {screenSize.width}</span>
-                <span>Height: {screenSize.height}</span> */}
-                {/* <Layout screenWidth={screenSize.width}/> */}
+    const screenSize = useScreenSize();
 
-                    <nav className='app__menu'>
-                        <Navigation screenWidth={screenSize.width}/>
-                    </nav>
-                    <main className='app__main'>
-                        <Page/>
-                    </main>
-                    <footer className='app__footer'>
-                        <Footer/>
-                    </footer>
-                </div>
-            </Router>
-        );
-    }
+    return (
+        <Router>
+            <div className="app">
+                <nav className='app__navigation'>
+                    <Logo/>
+                    <Navigation screenWidth={screenSize.width}/>
+                </nav>
+                <main className='app__main'>
+                    <Page/>
+                </main>
+                <footer className='app__footer'>
+                    <Footer/>
+                </footer>
+            </div>
+        </Router>
+    );
 };
-
-export default App;

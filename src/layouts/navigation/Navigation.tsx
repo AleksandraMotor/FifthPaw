@@ -1,36 +1,19 @@
-import { NavLink } from 'react-router-dom';
-import Logo from '../../components/logo/Logo';
-import { Component, ReactNode } from 'react';
+import { Component } from "react"
+import NavigationMobile from "./navigation-mobile/NavigationMobile"
+import NavigationDesktop from "./navigation-desktop/NavigationDesktop"
 
-const menuOptions = [
-    { name: 'adopcja', path: '/adoption' },
-    { name: 'ogłoszenia', path: '/news' },
-    { name: 'jak pomóc?', path: '/help' },
-    { name: 'o nas', path: '/about' },
-    { name: 'kontakt', path: '/contact' }
-]
+class Navigation extends Component<{ screenWidth: number }> {
 
-class Navigation extends Component <{ screenWidth: number }> {
-    state = {
-        showMenu: false
-    }
     render() {
-        const menu = menuOptions.map(option => (
-            <li key={option.name} className='menu__navigation'>
-                <NavLink to={option.path} className='menu__navigation__tab'>{option.name}</NavLink>
-            </li>
-        ));
+        if (this.props.screenWidth < 1024) {
+            return (
+                <NavigationMobile/>
+            )
+        }
         return (
-            <>
-                <Logo/>
-
-                <ul className='menu'>
-                    {menu}
-                </ul>
-            </>
-        );
-    }
-
+            <NavigationDesktop/>
+        )
+    };
 };
 
 export default Navigation;
