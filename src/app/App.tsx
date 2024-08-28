@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { BrowserRouter as Router } from 'react-router-dom';
+import { HashRouter as Router } from 'react-router-dom';
 import Footer from "../layouts/footer/Footer";
 import Page from "../layouts/page/Page";
 import Logo from "../components/logo/Logo";
