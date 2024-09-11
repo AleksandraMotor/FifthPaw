@@ -38,10 +38,11 @@
         letter-spacing: toRem(1.2);
         text-transform: uppercase;
         text-shadow: 2px 2px 5px $emphasis_dark;
+        margin-bottom: toRem(20);
     }
 
     &__image {
-        margin: toRem(20) 0;
+        margin-bottom: toRem(20);
     }
 
     &__text {

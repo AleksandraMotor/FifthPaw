@@ -1,0 +1,7 @@
+@import '../../scss/mixins/breakpoints.scss';
+@import '../../scss/mixins/variables.scss';
+@import '../../scss/functions/px-to-rem.scss';
+
+.article {
+    border: toRem(5) solid red;
+}

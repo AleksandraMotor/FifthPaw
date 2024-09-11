@@ -1,0 +1,47 @@
+import puszek from '../../assets/images/puszek.png';
+import wolontariat from '../../assets/images/wolontariat.png';
+import parrot from '../../assets/images/parrot2.png';
+
+export interface Article {
+    type?: string;
+    title: string;
+    img?: string;
+    text?: string;
+};
+
+export const NewsData = [
+    {
+        type: 'urgent',
+        title: 'Zaginął',
+        img: puszek,
+        text: 'Trwają poszukiwania Puszka! Ostatnio widziany dnia Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+    },
+    {
+        title: 'Szkolenia wolontariuszy',
+        img: wolontariat,
+        text: 'Trwa nabór na szkolenia wolontariuszy. Zapisy  dostępne w recepcji um dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+    },
+    {
+        type: 'urgent',
+        title: 'Znaleziono',
+        img: parrot,
+        text: 'Znaleziono papuge obrączkowaną w okolicy placu zabaw przy ulicy ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+    },
+    {
+        type: 'urgent',
+        title: 'Zaginął2',
+        img: puszek,
+        text: 'Trwają poszukiwania Puszka! Ostatnio widziany dnia Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+    },
+    {
+        title: 'Szkolenia wolontariuszy2',
+        img: wolontariat,
+        text: 'Trwa nabór na szkolenia wolontariuszy. Zapisy  dostępne w recepcji um dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+    },
+    {
+        type: 'urgent',
+        title: 'Znaleziono2',
+        img: parrot,
+        text: 'Znaleziono papuge obrączkowaną w okolicy placu zabaw przy ulicy ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+    },
+];
