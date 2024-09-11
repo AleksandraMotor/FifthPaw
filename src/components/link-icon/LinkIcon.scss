@@ -1,0 +1,9 @@
+@import '../../scss/functions/px-to-rem.scss';
+@import '../../scss/mixins/variables.scss';
+
+.link-icon {
+
+    &:hover {
+        color: $color_secondary;
+    }
+}
