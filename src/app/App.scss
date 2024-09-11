@@ -68,24 +68,14 @@
         position: absolute;
         bottom: toRem(-500px);
         background-color: $color_primary;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
         z-index: 10;
         box-shadow: 5px -5px 10px -2px $emphasis_dark;
         animation: move-down 1.5s forwards;
 
         @include breakpoint-above(md) {
-            flex-direction: row;
             max-width: toRem(1064);
             border-top-left-radius: toRem(20);
             border-top-right-radius: toRem(20);
-        }
-
-        &__logo {
-            margin: 0 toRem(10);
-            cursor: pointer;
         }
     }
 }
