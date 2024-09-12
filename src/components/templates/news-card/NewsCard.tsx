@@ -1,5 +1,6 @@
 import classNames from 'classnames';
 import { Article } from '../../../pages/news/NewsData';
+import { Link } from 'react-router-dom';
 
 import './NewsCard.scss';
 
@@ -26,7 +27,7 @@ const NewsCard: React.FC<Article> = ({ type, title, img, text }) => {
             {text && (
                 <span className='news-card__text'>{text}</span>   
             )}
-            
+            <Link className='news-card__link' to={`/news/${title}`} aria-label='Przejdź do strony artykułu'>Czytaj dalej...</Link>
         </div>
     );
 };
