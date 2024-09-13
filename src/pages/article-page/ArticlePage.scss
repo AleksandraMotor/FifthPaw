@@ -37,7 +37,8 @@
         max-width: 100%;
         max-height: toRem(500);
         margin-bottom: toRem(25);
-        border-radius: toRem(15);
+        border-radius: toRem(8);
+        border: toRem(1) solid $color_bg;
     }
 
     &__text {
