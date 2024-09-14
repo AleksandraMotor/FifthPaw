@@ -1,4 +1,4 @@
-import { AnnoucementsData } from './AnnoucementsData';
+import { NewsData } from '../../pages/news/NewsData';
 import AliceCarousel from 'react-alice-carousel';
 import NewsCard from '../templates/news-card/NewsCard';
 
@@ -27,7 +27,7 @@ const Annoucements: React.FC = () => {
     },
   };
 
-  const items = AnnoucementsData.map((item, index) => (
+  const items = NewsData.map((item, index) => (
     <NewsCard
       key={index}
       type={item.type}

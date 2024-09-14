@@ -1,0 +1,74 @@
+@import '../../scss/mixins/breakpoints.scss';
+@import '../../scss/mixins/variables.scss';
+@import '../../scss/functions/px-to-rem.scss';
+
+.article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    color: $color_light;
+    background-color: $color_brighter;
+    margin: 0 auto;
+    padding: toRem(30);
+    box-shadow: 5px 5px 10px -2px $emphasis_dark;
+
+    @include breakpoint-above(xs) {
+        padding: toRem(60);
+    }
+
+    @include breakpoint-above(md) {
+        max-width: toRem(1000);
+        border-radius: toRem(15);
+        margin: toRem(30) auto;
+    }
+
+    &__title {
+        text-align: center;
+        font-size: toRem(24);
+        letter-spacing: toRem(1.2);
+        text-transform: uppercase;
+        text-shadow: 2px 2px 5px $emphasis_dark;
+        margin-bottom: toRem(25);
+    }
+
+    &__image {
+        object-fit: contain;
+        max-width: 100%;
+        max-height: toRem(500);
+        margin-bottom: toRem(25);
+        border-radius: toRem(8);
+        border: toRem(1) solid $color_bg;
+    }
+
+    &__text {
+        font-size: toRem(18);
+        font-weight: 600;
+        text-align: center;
+        color: $color_bg;
+        margin-bottom: toRem(25);
+    }
+
+    &__link {
+        border-radius: toRem(50);
+        border: toRem(2) solid;
+        border-color: $color_bg;
+        background-color: $color_primary;
+        color: $color_light;
+        line-height: 1;
+        letter-spacing: toRem(1.2);
+        font-size: toRem(16);
+        text-shadow: 2px 2px 5px $emphasis_dark;
+        padding: toRem(10) toRem(20);
+        box-shadow: 5px 5px 10px -2px $color_bg;
+        cursor: pointer;
+        
+        &:hover {
+            font-weight: 600;
+            background-color: $color_light;
+            color: $color_bg;
+            border-color: $color_secondary;
+            text-shadow: none;
+        }
+    }
+}

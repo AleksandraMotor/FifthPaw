@@ -1,15 +1,10 @@
 import classNames from 'classnames';
+import { Article } from '../../../pages/news/NewsData';
+import { Link } from 'react-router-dom';
 
 import './NewsCard.scss';
 
-interface NewsCardProps {
-    type?: string;
-    title: string;
-    img: string;
-    text: string;
-};
-
-const NewsCard: React.FC<NewsCardProps> = ({ type, title, img, text }) => {
+const NewsCard: React.FC<Article> = ({ type, title, img, text }) => {
     const handleDragStart = (e: { preventDefault: () => any; }) => e.preventDefault();
     return (
         <div 
@@ -26,8 +21,13 @@ const NewsCard: React.FC<NewsCardProps> = ({ type, title, img, text }) => {
                 <path d="M48.7828 0.637059L41.1864 52.0403L0.468091 19.76L48.7828 0.637059Z" fill="currentColor"/>
             </svg>
             <span className='news-card__title'>{title}</span>
-            <img className='news-card__image' src={img} alt={title}/>
-            <span className='news-card__text'>{text}</span>
+            {img && (
+                <img className='news-card__image' src={img} alt={title}/>
+            )}
+            {text && (
+                <span className='news-card__text'>{text}</span>   
+            )}
+            <Link className='news-card__link' to={`/news/${title}`} aria-label='Przejdź do strony artykułu'>Czytaj dalej...</Link>
         </div>
     );
 };

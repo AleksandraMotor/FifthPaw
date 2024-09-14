@@ -2,12 +2,16 @@
 @import '../../scss/mixins/breakpoints.scss';
 @import '../../scss/mixins/variables.scss';
 
-.adoption {
+.news {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: toRem(1000);
 
-    &__search {
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: toRem(30);
         padding: toRem(20) 0;
     }
 }

@@ -1,0 +1,38 @@
+@import '../../scss/functions/px-to-rem.scss';
+@import '../../scss/mixins/variables.scss';
+
+.link-button {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: toRem(10);
+    border-radius: toRem(50);
+    border: toRem(2) solid;
+    border-color: $color_bg;
+    background-color: $color_primary;
+    color: $color_light;
+    font-weight: 600;
+    text-shadow: 2px 2px 5px $emphasis_dark;
+    padding: toRem(10) toRem(20);
+    box-shadow: 5px 5px 10px -2px $color_bg;
+    cursor: pointer;
+    
+    &:hover {
+        background-color: $color_light;
+        color: $color_bg;
+        border-color: $color_secondary;
+        text-shadow: none;
+    }
+
+    &__text {
+        text-align: center;
+        line-height: toRem(16);
+        letter-spacing: toRem(1.2);
+        font-size: toRem(16);
+    }
+
+    & > svg {
+        font-size: toRem(18);
+    }
+}

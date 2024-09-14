@@ -66,7 +66,7 @@
     &__footer {
         width: 100%;
         position: absolute;
-        bottom: toRem(-500px);
+        bottom: toRem(-500);
         background-color: $color_primary;
         z-index: 10;
         box-shadow: 5px -5px 10px -2px $emphasis_dark;

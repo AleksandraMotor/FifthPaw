@@ -1,18 +1,15 @@
 import Filter from '../../components/filter/Filter';
-import paw from '../../assets/icons/paw-white.png';
+import Header from '../../components/header/Header';
 
 import './Adoption.scss';
 
 const Adoption: React.FC = () => {
     return (
         <div className='adoption'>
-            <img className='adoption__image' src={paw} alt="paw icon" width={50}/>
-            <h1 className='adoption__header'>
-                zwierzęta do adopcji
-            </h1>
-            <div className='adoption__search'>
+            <Header>zwierzęta do adopcji</Header>
+            <section className='adoption__search'>
                 <Filter/>
-            </div>
+            </section>
         </div>
     );
 };
