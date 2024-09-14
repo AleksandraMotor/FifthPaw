@@ -12,14 +12,13 @@
     border-color: $color_bg;
     background-color: $color_primary;
     color: $color_light;
-    
+    font-weight: 600;
     text-shadow: 2px 2px 5px $emphasis_dark;
     padding: toRem(10) toRem(20);
     box-shadow: 5px 5px 10px -2px $color_bg;
     cursor: pointer;
     
     &:hover {
-        font-weight: 600;
         background-color: $color_light;
         color: $color_bg;
         border-color: $color_secondary;

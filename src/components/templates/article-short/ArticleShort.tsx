@@ -13,7 +13,7 @@ const ArticleShort: React.FC<Article> = ({ type, title, img, text }) => {
         >
             <h2 className={classNames({
                 'article-short__title': true,
-                'article-short--urgent': type === 'urgent',
+                'article-short__title--urgent': type === 'urgent',
             })}>
                 {title}
             </h2>
