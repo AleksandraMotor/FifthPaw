@@ -1,7 +1,7 @@
 import { NewsData } from './NewsData';
 import ArticleShort from '../../components/templates/article-short/ArticleShort';
-import paw from '../../assets/icons/paw-white.png';
 import './News.scss';
+import Header from '../../components/header/Header';
 
 const News = () => {
 
@@ -18,8 +18,7 @@ const News = () => {
 
     return (
         <section className='news'>
-            <img className='news__image' src={paw} alt="paw icon" width={50}/>
-            <h1 className='news__header'>tablica ogłoszeń</h1>
+            <Header>tablica ogłoszeń</Header>
             <ul className='news__list'>
                 {newsList}
             </ul>

@@ -8,16 +8,10 @@
     align-items: center;
     max-width: toRem(1000);
 
-    &__header {
-        text-align: center;
-        font-size: toRem(48);
-        line-height: toRem(50);
-        color: $color_light;
-        font-weight: 500;
-        padding: 0 toRem(10);
-        margin-top: toRem(10);
-        margin-bottom: toRem(30);
-        -webkit-text-stroke: toRem(1) $color_bg;
-        text-shadow: 2px 2px 5px $emphasis_dark;
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: toRem(30);
+        padding: toRem(20) 0;
     }
 }
