@@ -2,7 +2,6 @@ import { NavLink } from 'react-router-dom';
 import logo from '../../assets/logos/logo.png'
 
 import './Logo.scss';
-import { useEffect } from 'react';
 
 const Logo = () => {
 
