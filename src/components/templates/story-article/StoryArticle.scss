@@ -35,12 +35,13 @@
     &__text {
         color: $color_bg;
         letter-spacing: toRem(0.5);
-        line-height: 130%;
+        line-height: toRem(18);
         font-weight: 600;
         margin: 0 auto;
         margin-bottom: toRem(20);
         overflow: hidden;
         transition: height 0.5s linear;
+        max-width: toRem(600);
     }
 
     &__button {

@@ -5,16 +5,11 @@
 .contact {
     display: flex;
     flex-direction: column;
-    max-width: 100%;
-    margin-left: toRem(20);
-
-    @include breakpoint-above(xs) {
-        margin-left: toRem(30);
-    }
-
-    @include breakpoint-above(sm) {
-        margin-left: toRem(60);
-    }
+    width: 100%;
+    border: toRem(2) solid $color_primary;
+    border-radius: toRem(5);
+    padding: toRem(20);
+    box-shadow: inset 0 0 15px 5px $color_primary;
 
     &__title {
         color: $color_light;
@@ -24,8 +19,27 @@
         margin-bottom: toRem(15);
     }
 
-    &__description {
-        margin-bottom: toRem(15);
+    &__info {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: toRem(20);
+        margin-bottom: toRem(40);
+
+        @include breakpoint-above(xs) {
+            flex-direction: row;
+        }
+    }
+
+    &__address {
+        color: $color_bg;
+        display: flex;
+        flex-direction: column;
+        gap: toRem(10);
+    }
+
+    &__gmap {
+        width: 70%;
     }
 
     &__image {

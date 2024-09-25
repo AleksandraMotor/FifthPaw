@@ -14,7 +14,7 @@ const StoryArticle = ({ title, image, text }: Story) => {
 
     useEffect(() => {
         if (textRef.current) {
-            textRef.current.style.height = isExpanded ? `${textRef.current.scrollHeight}px` : '9em';
+            textRef.current.style.height = isExpanded ? `${textRef.current.scrollHeight}px` : '90px';
         }
     }, [isExpanded]);
 
