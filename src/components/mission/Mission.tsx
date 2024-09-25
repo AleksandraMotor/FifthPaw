@@ -6,7 +6,7 @@ import './Mission.scss';
 const Mission = () => {
     return (
         <article className='mission'>
-            <h2 className='mission__title'>o nas</h2>
+            <h2 className='mission__title'>nasza misja</h2>
             <img className='mission__image' src={mission} alt='our mission'/>
             <p className='mission__description'>
                 Lorem ipsum...

@@ -5,24 +5,14 @@
 .mission {
     display: flex;
     flex-direction: column;
-    gap: toRem(10);
+    gap: toRem(15);
     max-width: 100%;
-    margin-left: toRem(20);
-
-    @include breakpoint-above(xs) {
-        margin-left: toRem(30);
-    }
-
-    @include breakpoint-above(sm) {
-        margin-left: toRem(60);
-    }
 
     &__title {
         color: $color_light;
         font-size: toRem(24);
         -webkit-text-stroke: toRem(1) $color_bg;
         text-shadow: 2px 2px 5px $emphasis_dark;
-        margin-bottom: toRem(15);
     }
 
     &__image {
