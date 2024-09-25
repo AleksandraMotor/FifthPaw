@@ -1,12 +1,18 @@
 @import '../../scss/functions/px-to-rem.scss';
-@import '../../scss/mixins/breakpoints.scss';
 @import '../../scss/mixins/variables.scss';
 
 .our-stories {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
-    max-width: toRem(1064);
-    margin: 0 auto;
+    &__title {
+        color: $color_light;
+        font-size: toRem(24);
+        -webkit-text-stroke: toRem(1) $color_bg;
+        text-shadow: 2px 2px 5px $emphasis_dark;
+        margin-bottom: toRem(15);
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: toRem(15);
+    }
 }

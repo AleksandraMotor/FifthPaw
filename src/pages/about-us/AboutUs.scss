@@ -12,10 +12,12 @@
     &__content {
         color: $color_bg;
         display: flex;
+        flex-direction: column;
+        gap: toRem(30);
         width: 100%;
         margin: 0 auto;
         background-color: $color_brighter;
-        padding: toRem(30);
+        padding: toRem(20) toRem(10);
         box-shadow: 5px 5px 10px -2px $emphasis_dark;
 
         @include breakpoint-above(xs) {
@@ -23,7 +25,7 @@
         }
 
         @include breakpoint-above(sm) {
-            padding: toRem(60);
+            flex-direction: row;
         }
 
         @include breakpoint-above(md) {
@@ -35,16 +37,17 @@
     &__list {
         display: flex;
         flex-direction: column;
+        gap: toRem(2);
     }
 
     &__list-item {
         display: flex;
         flex-direction: column;
+        text-align: center;
         max-width: 100%;
         background: linear-gradient(to right, transparent, $color_bg);
         padding: toRem(2);
         padding-left: 0;
-        margin-bottom: toRem(2);
         border-top-right-radius: toRem(8);
         border-bottom-right-radius: toRem(8);
 

@@ -1,7 +1,7 @@
 import Annoucements from '../../components/annoucements/Annoucements';
 import Banner from '../../components/banner/Banner';
 import Feed from '../../components/feed/Feed';
-import OurStories from '../../components/our-stories/OurStories';
+import OurStoriesWidget from '../../components/our-stories-widget/OurStoriesWidget';
 import Support from '../../components/support/Support';
 import TopDonors from '../../components/top-donors/TopDonors';
 
@@ -30,7 +30,7 @@ const Home: React.FC = () => {
             <section className='home__section'>
                 <p className='home__section__subtitle'>Nasze historie</p>
                 <h2 className='home__section__title'>przeczytaj prawdziwe historie</h2>
-                <OurStories/>
+                <OurStoriesWidget/>
             </section>
         </div>
     );

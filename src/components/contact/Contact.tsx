@@ -1,5 +1,5 @@
-import LinkIcon from '../../components/link-icon/LinkIcon';
-import Logo from '../../components/logo/Logo';
+import LinkIcon from '../link-icon/LinkIcon';
+import Logo from '../logo/Logo';
 import { socialMediaData } from '../../layouts/footer/FooterData';
 
 import './Contact.scss';
