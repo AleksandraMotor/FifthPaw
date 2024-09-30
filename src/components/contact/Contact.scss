@@ -5,10 +5,11 @@
 .contact {
     display: flex;
     flex-direction: column;
+    gap: toRem(20);
     width: 100%;
     border: toRem(2) solid $color_primary;
     border-radius: toRem(5);
-    padding: toRem(20);
+    padding: toRem(40);
     box-shadow: inset 0 0 15px 5px $color_primary;
 
     &__title {
@@ -16,15 +17,13 @@
         font-size: toRem(24);
         -webkit-text-stroke: toRem(1) $color_bg;
         text-shadow: 2px 2px 5px $emphasis_dark;
-        margin-bottom: toRem(15);
     }
 
     &__info {
         display: flex;
         flex-direction: column;
         width: 100%;
-        gap: toRem(20);
-        margin-bottom: toRem(40);
+        gap: toRem(40);
 
         @include breakpoint-above(xs) {
             flex-direction: row;

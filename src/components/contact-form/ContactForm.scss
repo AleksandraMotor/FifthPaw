@@ -1,0 +1,69 @@
+@import '../../scss/functions/px-to-rem.scss';
+@import '../../scss/mixins/breakpoints.scss';
+@import '../../scss/mixins/variables.scss';
+
+.contact-form {
+    font-size: toRem(18);
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: toRem(20);
+    border: toRem(2) solid $color_primary;
+    border-radius: toRem(5);
+    padding: toRem(40);
+    box-shadow: inset 0 0 15px 5px $color_primary;
+
+    &__header {
+        color: $color_light;
+        font-size: toRem(24);
+        -webkit-text-stroke: toRem(1) $color_bg;
+        text-shadow: 2px 2px 5px $emphasis_dark;
+    }
+}
+
+@keyframes opacityButton {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes rotateButton {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fly {
+    from {
+        transform: translateY(0.1em);
+        transform: rotate(10deg);
+    }
+    to {
+        transform: rotate(-10deg);
+        transform: translateY(-0.1em);
+    }
+}
+
+@keyframes fly-away {
+    from {
+        bottom: 45%;
+        left: 5%;
+        
+        font-size: toRem(100);
+    }
+    to {
+        bottom: 100%;
+        left: 100%;
+        font-size: toRem(20);
+    }
+}
