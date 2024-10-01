@@ -24,7 +24,7 @@ const Footer = () => {
                         <NavLink className='footer-menu__link' to='/help' aria-label='Go to help page'>jak pomóc?</NavLink>
                     </li>
                     <li className='footer-menu__item'>
-                        <NavLink className='footer-menu__link' to='/contact' aria-label='Go to contact page'>kontakt</NavLink>
+                        <NavLink className='footer-menu__link' to='/about-us/contact' aria-label='Go to contact page'>kontakt</NavLink>
                         <div className='footer-menu__social-media' aria-label='Social Media Links'>
                             {socialMedia}  
                         </div>

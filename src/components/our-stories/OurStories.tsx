@@ -1,22 +1,23 @@
-import StoriesCard from '../templates/stories-card/StoriesCard';
 import { OurStoriesData } from './OurStoriesData';
+import StoryArticle from '../templates/story-article/StoryArticle';
 
 import './OurStories.scss';
 
-const OurStories: React.FC = () => {
+const OurStories = () => {
+
+    const storiesList = OurStoriesData.map((story, index) => (
+        <li key={index} id={story.title}>
+            <StoryArticle title={story.title} text={story.text} image={story.image}/>
+        </li>
+    ))
+
     return (
-        <div className='our-stories'>
-            { OurStoriesData.map((item, index) => {
-                return (
-                    <StoriesCard
-                        key={index}
-                        title={item.title}
-                        image={item.image}
-                        text={item.text}
-                    />
-                )
-            })}
-        </div>
+        <section className='our-stories'>
+            <h2 className='our-stories__title'>nasze historie</h2>
+            <ul className='our-stories__list'>
+                {storiesList}
+            </ul>
+        </section>
     );
 };
 

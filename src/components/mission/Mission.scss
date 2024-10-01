@@ -1,0 +1,29 @@
+@import '../../scss/functions/px-to-rem.scss';
+@import '../../scss/mixins/breakpoints.scss';
+@import '../../scss/mixins/variables.scss';
+
+.mission {
+    display: flex;
+    flex-direction: column;
+    gap: toRem(20);
+    max-width: 100%;
+    border: toRem(2) solid $color_primary;
+    border-radius: toRem(5);
+    padding: toRem(40);
+    box-shadow: inset 0 0 15px 5px $color_primary;
+    
+    &__title {
+        color: $color_light;
+        font-size: toRem(24);
+        -webkit-text-stroke: toRem(1) $color_bg;
+        text-shadow: 2px 2px 5px $emphasis_dark;
+    }
+
+    &__image {
+        border-radius: toRem(8);
+        object-fit: contain;
+        max-width: 100%;
+        max-height: toRem(400);
+        margin: 0 auto;
+    }
+}

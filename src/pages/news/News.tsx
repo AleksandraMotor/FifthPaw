@@ -1,7 +1,8 @@
 import { NewsData } from './NewsData';
 import ArticleShort from '../../components/templates/article-short/ArticleShort';
-import './News.scss';
 import Header from '../../components/header/Header';
+
+import './News.scss';
 
 const News = () => {
 
