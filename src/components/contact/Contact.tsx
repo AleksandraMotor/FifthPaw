@@ -1,6 +1,8 @@
 import LinkIcon from '../link-icon/LinkIcon';
 import Logo from '../logo/Logo';
 import { socialMediaData } from '../../layouts/footer/FooterData';
+import LinkButton from '../link-button/LinkButton';
+import { PiArrowUDownLeftBold } from 'react-icons/pi';
 
 import './Contact.scss';
 
@@ -17,6 +19,7 @@ const Contact = ()=> {
                         e-mail: fifthpaw@gmail.com <br/>
                         tel: +48 592 139 482 
                     </span>
+                    <LinkButton link={'/about-us/form'} text={'Przejdź do formularza'} icon={<PiArrowUDownLeftBold />}/>
                     <address>
                         FifthPaw<br/>
                         Lorem ipsum 13 <br/>

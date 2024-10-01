@@ -25,7 +25,7 @@
         width: 100%;
         gap: toRem(40);
 
-        @include breakpoint-above(xs) {
+        @include breakpoint-above(sm) {
             flex-direction: row;
         }
     }
@@ -34,11 +34,15 @@
         color: $color_bg;
         display: flex;
         flex-direction: column;
-        gap: toRem(10);
+        gap: toRem(20);
     }
 
     &__gmap {
-        width: 70%;
+        width: 100%;
+
+        @include breakpoint-above(sm) {
+           width: 50%; 
+        }
     }
 
     &__image {
