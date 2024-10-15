@@ -1,4 +1,5 @@
 import image from '../../assets/images/work-in-progress.jpg';
+
 import './WorkInProgress.scss';
 
 const WorkInProgress: React.FC = () => {

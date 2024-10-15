@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import './StoriesCard.scss';
 
 interface OurStoriesProps {
@@ -13,8 +15,6 @@ const StoriesCard: React.FC<OurStoriesProps> = ({ title, image, text }) => {
                 className='stories-card__image' 
                 src={image} 
                 alt={title}
-                width={140}
-                height={140}
             />
             <h3 className='stories-card__header'>
                 {title}
@@ -22,9 +22,9 @@ const StoriesCard: React.FC<OurStoriesProps> = ({ title, image, text }) => {
             <p className='stories-card__text'>
                 {text}
             </p>
-            <span className='stories-card__cta'>
+            <Link className='stories-card__cta' to={`/about-us/our-stories#${title}`}>
                 Czytaj dalej...
-            </span>
+            </Link>
         </div>
     );
 };

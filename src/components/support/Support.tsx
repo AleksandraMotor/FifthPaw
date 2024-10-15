@@ -12,7 +12,7 @@ const Support: React.FC = () => {
                     <h2 className='support__info__content__title'>Jak możesz pomóc?</h2>
                     <p className='support__info__content__text'>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 </div>
-                <CTAButton type='transparent'>Wspieraj</CTAButton>
+                <CTAButton type='transparent' link='/help'>Wspieraj</CTAButton>
             </div>
         </div>
     );
