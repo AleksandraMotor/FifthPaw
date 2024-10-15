@@ -19,7 +19,7 @@ const StoryArticle = ({ title, image, text }: Story) => {
     }, [isExpanded]);
 
     return (
-        <article className='story-article'>
+        <article className='story-article' id={title}>
             <h3 className='story-article__title'>{title}</h3>
             {image && (
                 <img className='story-article__image' src={image} alt={title}/>

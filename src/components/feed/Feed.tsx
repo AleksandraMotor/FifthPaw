@@ -12,7 +12,7 @@ const Feed: React.FC = () => {
                     <h2 className='feed__info__content__title'>Nakarm zwierzaka</h2>
                     <p className='feed__info__content__text'>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 </div>
-                <CTAButton>Nakarm</CTAButton>
+                <CTAButton link='/help#feed'>Nakarm</CTAButton>
             </div>
         </div>
     );
