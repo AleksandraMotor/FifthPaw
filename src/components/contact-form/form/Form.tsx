@@ -25,9 +25,7 @@ const Form = () => {
         mode: "all",
     });
 
-    const sendEmail = () => {
-        // data.preventDefault();
-        
+    const sendEmail = () => {        
         emailjs
         .sendForm(
             'service_a0hnxcn', 
@@ -45,31 +43,27 @@ const Form = () => {
         });
     };
 
-    // console.log("showMessage", showMessage);
-    // console.log("showSucess", showSucess);
-    // console.log("showError", showError);
-
     return (
         <form 
             className="form"
             ref={form} 
             onSubmit={handleSubmit(sendEmail)}
         >
-            <label>Name</label>
+            <label>Imię</label>
             <input
                 name="user_name"
                 type="text"
-                placeholder="Username"
+                placeholder="Imię"
                 className="form__input"
                 {...register("user_name", {
-                    required: "Username is required",
+                    required: "Imię jest wymagane.",
                     minLength: {
                         value: 3,
-                        message: "Username must be atleast 3 characters long"
+                        message: "Imię musi mieć conajmniej 3 znaki."
                     },
                     maxLength: {
                         value: 30,
-                        message: "Username must be atmost 30 characters long"
+                        message: "Imię nie może być dłuższe niż 30 znaków."
                     },
                 })}
             />
@@ -83,26 +77,26 @@ const Form = () => {
                 placeholder="Email"
                 className="form__input"
                 {...register("user_email", {
-                    required: "Email is required...",
+                    required: "Email jest wymagany...",
                     pattern: {
                         value: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-                        message: "Email must be valid",
+                        message: "Wymagany prawidłowy adres email.",
                     },
                 })} 
             />
             <div className="form__message">
                 {errors.user_email?.message?.toString()}
             </div>
-            <label>Message</label>
+            <label>Wiadomość</label>
             <textarea
                 name="message"
-                placeholder="Message"
+                placeholder="Tutaj napisz treść swojej wiadomości."
                 className="form__input"
             />
             <input 
                 className="form__send-button" 
                 type="submit" 
-                value="Send"
+                value="Wyślij"
                 onClick={showInfo}
             />
             {showMessage && 
@@ -111,15 +105,15 @@ const Form = () => {
                         id='checking'
                         className="form-modal__checking"
                     >
-                        Checking
+                        Sprawdzanie formularza...
                         <HiIcons.HiOutlineArrowPath/>
                     </div>
                     <Validation sucess={showSucess} error={showError}/>
                     <button 
-                            className="form__send-button"
+                        className="form__send-button"
                         onClick={showInfo}
                     >
-                        Return to the contact form<PiArrowUDownLeftBold />
+                        Wróć do formularza kontaktowego<PiArrowUDownLeftBold />
                     </button>      
                 </div> 
             }
