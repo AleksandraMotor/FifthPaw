@@ -13,15 +13,15 @@ const Validation = ({ sucess, error }: ValidationProps) => {
         <div className="validation">
             {!sucess && !error &&
                 <div className="validation__info">
-                    Form Validation
-                    <span>Check your contact form for validation requirement messages like "Email is required..." or " "Username is to short/long"</span>
+                    Błąd walidacji formularza
+                    <span>Sprawdź, czy w formularzu kontaktowym nie ma komunikatów o wymogach walidacji, takich jak „Podaj adres e-mail...” lub „Nazwa użytkownika jest za krótka/długa”</span>
                 </div>                             
             }
             {sucess &&
                 <div className="validation__send">
                     <IoIcons.IoMdPaperPlane />
                     <div>
-                        Message Sent
+                        Wiadomośc wysłana
                     </div>
                 </div>  
             }
@@ -29,7 +29,7 @@ const Validation = ({ sucess, error }: ValidationProps) => {
                 <div className="validation__error">
                     <div className="validation__error__text">
                         <BiIcons.BiMessageSquareError/>
-                        Server Error
+                        Błąd servera
                     </div>
                 </div> 
             }  
