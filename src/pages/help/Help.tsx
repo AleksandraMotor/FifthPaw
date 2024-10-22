@@ -1,14 +1,17 @@
 import Header from '../../components/header/Header';
-import WorkInProgress from '../../components/work-in-progress/WorkInProgress';
+import OurNeeds from '../../components/our-needs/OurNeeds';
 
 import './Help.scss';
 
 const Help = () => {
     return (
-        <div className='help'>
+        <section className='help'>
+            <OurNeeds/>
             <Header>Nasze potrzeby, czyli jak pomóc</Header>
-            <WorkInProgress/>
-        </div>
+            <p>
+                Nowość "Nakarm zwierzaka"!
+            </p>
+        </section>
     );
 };
 

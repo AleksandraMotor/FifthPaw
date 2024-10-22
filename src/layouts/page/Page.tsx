@@ -7,6 +7,7 @@ import News from "../../pages/news/News";
 import ArticlePage from "../../pages/article-page/ArticlePage";
 import AboutUs from "../../pages/about-us/AboutUs";
 import Help from "../../pages/help/Help";
+import HelpSection from "../../pages/help-section/HelpSection";
 
 const ScrollToTop = (props: { children: any; }) => {
     const location = useLocation();
@@ -32,6 +33,7 @@ const Page = () => {
                 <Route path='/news' element={<News/>}/>
                 <Route path='/news/:id' element={<ArticlePage/>}/>
                 <Route path='/help' element={<Help/>}/>
+                <Route path='/help/:id' element={<HelpSection/>}/>
                 <Route path='/about-us/*' element={<AboutUs/>}/>
                 <Route path='*' element={<WorkInProgress/>}/> 
             </Routes>
