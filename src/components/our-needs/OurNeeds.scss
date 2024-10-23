@@ -1,4 +1,14 @@
+@import '../../scss/functions/px-to-rem.scss';
+@import '../../scss/mixins/breakpoints.scss';
 
 .our-needs {
     display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: toRem(1000);
+    justify-content: space-between;
+
+    @include breakpoint-above(md) {
+        flex-direction: row;
+    }
 }

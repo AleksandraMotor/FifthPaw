@@ -16,7 +16,7 @@ const OurNeeds = () => {
     ))
 
     return (
-        <ul className="our-needs">
+        <ul className="our-needs" aria-label='Subpage navigation'>
             {navList}
         </ul>
     );
