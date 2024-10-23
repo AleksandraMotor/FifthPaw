@@ -4,11 +4,10 @@
 .our-needs {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    max-width: toRem(1000);
-    justify-content: space-between;
+    gap: toRem(30);
+    
 
-    @include breakpoint-above(md) {
+    @include breakpoint-above(sm) {
         flex-direction: row;
     }
 }

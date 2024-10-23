@@ -12,7 +12,7 @@ const NeedsCard: React.FC<NeedsCardProps> = ({ title, icon }) => {
         <div className='needs-card'>
             <section className='needs-card-front'>
                 {icon}
-                <h3>{title}</h3>  
+                <span>{title}</span>  
             </section>
             <section className='needs-card-back'>
                 <span>{title}</span>  

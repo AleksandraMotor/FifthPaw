@@ -3,10 +3,7 @@
 @import '../../scss/mixins/breakpoints.scss';
 
 .header {
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    flex-wrap: wrap;
+    text-align: center;
     padding: toRem(20);
     width: 100%;
 

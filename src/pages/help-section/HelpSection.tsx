@@ -4,6 +4,8 @@ import Help from "../help/Help";
 import OurNeeds from "../../components/our-needs/OurNeeds";
 import Header from "../../components/header/Header";
 
+import './HelpSection.scss';
+
 const sections: Section[] = HelpData;
 
 const HelpSection = () => {
@@ -17,10 +19,10 @@ const HelpSection = () => {
     };
 
     return (
-        <section className="our-needs">
+        <section className="help-section">
             <OurNeeds/>
             <Header>{section.title}</Header>
-            
+            {section.children}
         </section>
     );
 };

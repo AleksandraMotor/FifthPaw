@@ -1,0 +1,54 @@
+@import '../../scss/functions/px-to-rem.scss';
+@import '../../scss/mixins/variables.scss';
+@import '../../scss/mixins/breakpoints.scss';
+
+.gifts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: toRem(20);
+    color: $color_light;
+    max-width: toRem(500);
+    padding: toRem(20);
+    margin-bottom: toRem(40);
+
+    @include breakpoint-above(sm) {
+        flex-direction: row; 
+        gap: toRem(50);
+        max-width: toRem(1000);
+    }
+
+    &__img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+
+        @include breakpoint-above(xs) {
+            max-width: toRem(300);
+        }
+
+        @include breakpoint-above(md) {
+            max-width: 100%;
+        }
+    }
+
+    &__article {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: toRem(20);
+        letter-spacing: toRem(0.8);
+    }
+
+    &__title {
+        -webkit-text-stroke: toRem(1) $color_bg;
+        text-shadow: 2px 2px 5px $emphasis_dark;
+    }
+
+    &__list {
+        list-style-type: circle;
+        list-style-position: inside;
+        font-weight: 600;
+        letter-spacing: toRem(1.1);
+    }
+}
