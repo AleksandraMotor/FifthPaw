@@ -10,7 +10,7 @@ const sections: Section[] = HelpData;
 
 const HelpSection = () => {
     let { id } = useParams<{ id: string }>();
-    const section = sections.find(section => section.title === id);
+    const section = sections.find(section => section.id === id);
 
     if (!section) {
         return (
@@ -19,7 +19,7 @@ const HelpSection = () => {
     };
 
     return (
-        <section className="help-section">
+        <section className="help-section" key={section.id}>
             <OurNeeds/>
             <Header>{section.title}</Header>
             {section.children}

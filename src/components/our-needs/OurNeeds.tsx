@@ -7,8 +7,9 @@ import './OurNeeds.scss';
 const OurNeeds = () => {
 
     const navList = HelpData.map(item => (
-        <li key={item.title}>
+        <li key={item.id}>
             <NeedsCard
+                id={item.id}   
                 title={item.title}
                 icon={item.icon}
             />

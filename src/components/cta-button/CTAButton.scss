@@ -3,6 +3,8 @@
 @import '../../scss/mixins/breakpoints.scss';
 
 .cta-button {
+    display: flex;
+    gap: toRem(8);
     border-radius: toRem(50);
     border: toRem(2) solid;
     border-color: transparent;

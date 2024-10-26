@@ -5,13 +5,13 @@ import './Gifts.scss';
 
 const Gifts = () => {
     return (
-        <article className='gifts'>
+        <section className='gifts'>
             <img
                 className='gifts__img'
                 src={giftCat}
                 alt='Image of cat under christmas tree'
             />
-            <section className='gifts__article'>
+            <article className='gifts__article'>
                 <h2 className='gifts__title'>Schroniskowe magazyny tekstyliów zawsze bardzo chętnie przyjmą:</h2>
                 <ul className='gifts__list'>
                     <li>koce</li>
@@ -29,8 +29,8 @@ const Gifts = () => {
                     Jeśli macie Państwo wątpliwości co przywieźć do nas zachęcamy do kontaktu telefonicznego lub mejlowego.
                 </p>
                 <CTAButton link={'/about-us/contact'} children={'Zobacz trasę'}/>
-            </section>
-        </article>
+            </article>
+        </section>
     );
 };
 
