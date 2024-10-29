@@ -1,4 +1,3 @@
-import classNames from 'classnames';
 import { foundations } from '../../pages/help/HelpData';
 import DonateButton from '../donate-button/DonateButton';
 

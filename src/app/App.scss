@@ -59,7 +59,7 @@
         padding-bottom: toRem(500);
 
         @include breakpoint-above(md) {
-            padding-bottom: toRem(150);
+            padding-bottom: toRem(240);
         }
     }
 

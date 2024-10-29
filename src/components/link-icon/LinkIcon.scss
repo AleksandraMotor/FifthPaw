@@ -2,6 +2,7 @@
 @import '../../scss/mixins/variables.scss';
 
 .link-icon {
+    margin: toRem(5);
 
     &:hover {
         color: $color_secondary;

@@ -15,21 +15,29 @@
         font-weight: 600;
         -webkit-text-stroke: toRem(1) $color_bg;
         text-shadow: 2px 2px 5px $emphasis_dark;
+        position: relative;
 
         @include breakpoint-above(md) {
             font-size: toRem(38);
         }
-    }
 
-    &__image {
-        max-height: toRem(50);
-        rotate: -15deg;
-        padding-bottom: toRem(6);
-        padding-top: toRem(10);
+        &::after {
+            content: " ";
+            background-image: url('../../assets/icons/paw.png');
+            background-repeat: no-repeat, no-repeat;
+            background-position: right bottom, top left;
+            background-size: toRem(40) toRem(50);
+            width: toRem(40);
+            height: toRem(50);
+            position: absolute;
+            bottom: toRem(5);
+            right: toRem(-40);
 
-        @include breakpoint-above(md) {
-            max-height: toRem(65);
-            padding-bottom: toRem(8);
+            @include breakpoint-above(sm) {
+                background-size: toRem(44) toRem(55);
+                width: toRem(44);
+                height: toRem(55);
+            }
         }
     }
 }

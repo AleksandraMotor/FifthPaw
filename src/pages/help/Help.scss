@@ -1,7 +1,74 @@
-
+@import '../../scss/mixins/breakpoints.scss';
+@import '../../scss/mixins/variables.scss';
+@import '../../scss/functions/px-to-rem.scss';
 
 .help {
     display: flex;
     flex-direction: column;
+    gap: toRem(10);
     align-items: center;
+}
+
+.help-article {
+    display: flex;
+    flex-direction: column;
+    gap: toRem(10);
+    color: $color_light;
+    padding: toRem(15);
+
+    &__title {
+        -webkit-text-stroke: toRem(1) $color_bg;
+        text-shadow: 2px 2px 5px $emphasis_dark;
+    }
+
+    &__img-box {
+        align-self: center;
+        position: relative;
+        max-width: toRem(300);
+
+        @include breakpoint-above(xs) {
+            max-width: toRem(400);
+        }
+
+        @include breakpoint-above(sm) {
+            max-width: toRem(1000);
+        }
+
+        img {    
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        
+        svg {
+            position: absolute;
+            bottom: 20%;
+            right: 5%;
+            rotate: 90deg;
+            font-size: toRem(100);
+            color: $color_secondary;
+            animation: grow 2s infinite;
+
+            @include breakpoint-above(md) {
+                bottom: 28%;
+                right: 5%;                
+            }
+        }   
+    }
+    
+    &__link {
+        color: $color_secondary;
+    }  
+}
+
+@keyframes grow {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(toRem(20), toRem(20));
+    }
+    100% {
+        transform: translate(0, 0);
+    }
 }

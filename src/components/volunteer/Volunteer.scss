@@ -33,7 +33,7 @@
             justify-content: center;
             width: 100%;
             height: auto;
-            padding: toRem(50) 0;
+            padding: toRem(50) toRem(20);
 
             @include breakpoint-above(md) {
                 width: 50%;
@@ -68,7 +68,7 @@
         width: 100%;
         gap: toRem(20);
         letter-spacing: toRem(0.8);
-        padding: toRem(20) 0;
+        padding: toRem(20);
     }
 }
 
