@@ -1,0 +1,124 @@
+@import '../../scss/mixins/variables.scss';
+@import '../../scss/functions/px-to-rem.scss';
+@import '../../scss/mixins/breakpoints.scss';
+
+.volunteer {
+    display: flex;
+    flex-direction: column;
+    gap: toRem(20);
+    align-items: center;
+    color: $color_light;
+    margin: toRem(20) 0;
+
+    &__title {
+        -webkit-text-stroke: toRem(1) $color_bg;
+        text-shadow: 2px 2px 5px $emphasis_dark;
+        max-width: toRem(1000);
+    }
+
+    &__article {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100vw;
+
+        @include breakpoint-above(md) {
+            flex-direction: row;
+        }
+
+        &--left, &--right {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: auto;
+            padding: toRem(50) toRem(20);
+
+            @include breakpoint-above(md) {
+                width: 50%;
+            }
+        }
+
+        &--left {
+            background-color: $color_brighter;
+
+            @include breakpoint-above(md) {
+                
+                padding-right: toRem(40);
+            }
+        }
+
+        &--right {
+            background-color: $color_primary;
+            gap: toRem(20);
+            font-size: toRem(18);
+
+            @include breakpoint-above(md) {
+                align-items: flex-start;
+                padding-left: toRem(40); 
+            }
+        }
+    }
+
+    &__sign-up {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: toRem(20);
+        letter-spacing: toRem(0.8);
+        padding: toRem(20);
+    }
+}
+
+.requirements {
+    display: flex;
+    flex-direction: column;
+    gap: toRem(15);
+    width: 100%;
+    max-width: toRem(350);
+    color: $color_bg;
+    font-weight: 800;
+    font-size: toRem(16);
+    line-height: 1.3;
+
+    @include breakpoint-above(xs) {
+        max-width: toRem(400);
+    }
+
+    @include breakpoint-above(md) {
+        align-self: flex-end;
+    }
+
+    &__header {
+        font-size: toRem(18);
+    }
+
+    &__list {
+        list-style-type: circle;
+        list-style-position: inside;
+        font-weight: 500;
+    }
+}
+
+.tasks-card {
+    display: flex;
+    flex-direction: column;
+    gap: toRem(8);
+    background-color: $color_bg;
+    border-radius: toRem(30);
+    max-width: toRem(300);
+    padding: toRem(15);
+
+    &__header {
+        font-size: toRem(20);
+        text-transform: uppercase;
+    }
+
+    &__list {
+        list-style-type: circle;
+        list-style-position: inside;
+        font-size: toRem(16);
+    }
+}

@@ -2,7 +2,7 @@ import story from '../../assets/images/story.png';
 import puszek from '../../assets/images/puszek.png';
 import parrot from '../../assets/images/parrot.jpg';
 import cat from '../../assets/images/cat.jpg';
-import lorem from '../../assets/images/lorem.jpg';
+import lorem from '../../assets/images/lorem.png';
 import why from '../../assets/images/why.jpg';
 
 export interface Story {

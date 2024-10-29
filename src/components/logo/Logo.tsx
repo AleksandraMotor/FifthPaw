@@ -7,7 +7,7 @@ const Logo = () => {
 
     return (
         <NavLink to='/' className='logo' onClick={() => window.scrollTo(0, 0)}>
-            <img src={logo} alt="Logo PiątaŁapa"/>
+            <img src={logo} alt="Logo PiątaŁapa" width='190' height='80'/>
         </NavLink>
     );
 };

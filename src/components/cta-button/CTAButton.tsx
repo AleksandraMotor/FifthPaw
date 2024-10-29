@@ -7,8 +7,9 @@ import './CTAButton.scss';
 interface CTAButtonProps {
     type?: string;
     link: string;
-    children: string;
-}
+    children: string | JSX.Element | (string | JSX.Element)[];
+};
+
 
 const CTAButton: React.FC<CTAButtonProps> = ({type, link, children}) => {
     return (

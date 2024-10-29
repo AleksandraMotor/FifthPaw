@@ -1,0 +1,104 @@
+@import '../../scss/functions/px-to-rem.scss';
+@import '../../scss/mixins/variables.scss';
+@import '../../scss/mixins/breakpoints.scss';
+
+.donate {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    color: $color_light;
+    letter-spacing: toRem(1);
+    width: 100vw;
+
+    @include breakpoint-above(md) {
+        flex-direction: row;
+        align-items: baseline;
+    }
+
+    &--left, &--right {
+        width: 100%;
+        height: 100%;
+
+        @include breakpoint-above(md) {
+            width: 50%;
+        }
+    }
+
+    &--left {
+        display: flex;
+        flex-direction: column-reverse;
+
+        @include breakpoint-above(md) {
+            flex-direction: column;
+        }
+        
+        .donate__article:first-child {
+            background-color: $color_secondary-50;
+        }   
+    }
+
+    &--right {
+        background-color: $color_brighter;
+        color: $color_bg;
+    }
+
+    &__title {
+        -webkit-text-stroke: toRem(1) $color_bg;
+        text-shadow: 2px 2px 5px $emphasis_dark;
+
+        @include breakpoint-above(md) {
+            &--left {
+                text-align: end;           
+            }
+        }
+    }
+
+    &__article {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include breakpoint-above(md) {
+            align-items: center;
+            justify-content: end;
+        }
+
+        &--right {
+            display: flex;
+            justify-content: center;
+
+            @include breakpoint-above(md) {
+                justify-content: flex-start;
+            }
+        }
+
+        &--box {
+            display: flex;
+            flex-direction: column;
+            gap: toRem(15);
+            margin: toRem(30) toRem(20);
+            max-width: toRem(500);
+
+            @include breakpoint-above(md) {
+                max-width: toRem(620);
+            }       
+        }
+    }
+
+    &__list {
+        list-style-type: circle;
+        list-style-position: inside;
+    }
+
+    &__tiles {
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: toRem(8);
+
+        @include breakpoint-above(md) {
+            justify-content: flex-end;
+        }
+    }
+}

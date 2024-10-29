@@ -1,35 +1,11 @@
-import { useState, useEffect } from "react";
 import { HashRouter as Router } from 'react-router-dom';
-import Footer from "../layouts/footer/Footer";
-import Page from "../layouts/page/Page";
-import Logo from "../components/logo/Logo";
+import { useScreenSize } from "../helpers/ScreenSize";
 import Navigation from "../layouts/navigation/Navigation";
+import Page from "../layouts/page/Page";
+import Footer from "../layouts/footer/Footer";
+import Logo from "../components/logo/Logo";
 
 import './App.scss';
-
-const useScreenSize = () => {
-    const [screenSize, setScreenSize] = useState({
-        width: window.innerWidth,
-        height: window.innerHeight
-    });
-
-    useEffect(() => {
-        const handleResize = () => {
-            setScreenSize({
-                width: window.innerWidth,
-                height: window.innerHeight
-            });
-        };
-
-        window.addEventListener('resize', handleResize);
-
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
-    }, []);
-
-    return screenSize;
-};
 
 export default function App() {
 

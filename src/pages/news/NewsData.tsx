@@ -1,10 +1,10 @@
 import puszek from '../../assets/images/puszek.png';
 import wolontariat from '../../assets/images/wolontariat.png';
 import parrot from '../../assets/images/parrot2.png';
-import kittens from '../../assets/images/kittens.jpg';
+import kittens from '../../assets/images/kittens.png';
 import cat from '../../assets/images/cat.jpg';
 import party from '../../assets/images/party.jpg';
-import lorem from '../../assets/images/lorem.jpg';
+import lorem from '../../assets/images/lorem.png';
 import why from '../../assets/images/why.jpg';
 
 export interface Article {

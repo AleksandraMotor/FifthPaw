@@ -1,0 +1,62 @@
+@import '../../../scss/functions/px-to-rem.scss';
+@import '../../../scss/mixins/variables.scss';
+
+.needs-card {
+    position: relative;
+    width: toRem(210);
+    height: toRem(140);
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    color: $color_bg;
+
+    &:hover {
+       transform: rotateX(180deg); 
+    }
+}
+
+.needs-card-front, .needs-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border-radius: toRem(100);
+    display: flex;
+    flex-direction: column;
+    gap: toRem(10);
+    align-items: center;
+    justify-content: center;
+    font-size: toRem(18);
+    font-weight: 600;
+
+    svg {
+        width: toRem(70);
+        height: toRem(70);
+    }
+}
+
+.needs-card-front {
+    background-color: rgba(245, 245, 245, 0.5);
+
+    &::before {
+        position: absolute;
+        content: ' ';
+        width: 102%;
+        height: 102%;
+        border: toRem(3) dashed $color_secondary;
+        border-radius: toRem(100);
+    }
+}
+
+.needs-card-back {
+    background-color: $color_secondary;
+    transform: rotateX(180deg);
+
+    &__link {
+        padding: toRem(5) toRem(10);
+        border: toRem(2) solid $color_light;
+        border-radius: toRem(100);
+        color: $color_light;
+        cursor: pointer;
+    }
+}
