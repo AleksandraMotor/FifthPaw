@@ -21,4 +21,4 @@ On this website you will find news articles section, contact page with google ma
 
 Explore [Live view](https://aleksandramotor.github.io/FifthPaw/)
 or 
-check out my fimga project 'FifthPaw Animal Shelter'.
+check out my fimga project [FifthPaw Animal Shelter]({{file name='FifthPaw-AnimalShelterWebsite.png'}}).
